@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -23,11 +24,17 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-lg sm:text-xl font-bold tracking-widest text-white">
-              E-CELL <span className="text-xs sm:text-sm font-light text-gray-400">VSSUT BURLA</span>
-            </span>
+          {/* Logo Only (Text Removed) */}
+          <Link href="/" className="flex items-center">
+            <div className="relative w-16 h-16 sm:w-20 sm:h-20 my-2">
+              <Image
+                src="/logo.png"
+                alt="E-Cell VSSUT Logo"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
           </Link>
 
           {/* Desktop & Tablet (Large Screen) Links */}
