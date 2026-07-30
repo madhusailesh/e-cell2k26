@@ -24,7 +24,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
-          {/* Logo Only (Text Removed) */}
+          {/* Constant & Big Logo on Left Side */}
           <Link href="/" className="flex items-center">
             <div className="relative w-16 h-16 sm:w-20 sm:h-20 my-2">
               <Image
@@ -37,13 +37,13 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* Desktop & Tablet (Large Screen) Links */}
-          <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
+          {/* Desktop & Tablet Links */}
+          <div className="hidden lg:flex items-center space-x-6">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-gray-300 hover:text-white text-sm font-medium transition-colors duration-200"
+                className="text-gray-300 hover:text-white text-sm font-medium transition-colors duration-200 uppercase tracking-wider"
               >
                 {link.name}
               </Link>
