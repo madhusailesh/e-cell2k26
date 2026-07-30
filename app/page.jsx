@@ -5,7 +5,7 @@ import Hero from "@/components/Hero";
 import About from "./about/page";
 import EventsPage from "./events/page";
 import Loader from "@/components/Loader";
-
+import StartupsPage from "./startups/page";
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
@@ -25,6 +25,10 @@ export default function Home() {
 
         {/* Events Section */}
         <EventsPage />
+
+        {/* Startups Section */}  
+
+        <StartupsPage />
       </main>
     </>
   );
