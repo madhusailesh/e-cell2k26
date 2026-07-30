@@ -17,13 +17,13 @@ const facultyMembers = [
     name: "Dr. Trupti Ranjan Mohapatra",
     role: "Vice President, Technical Society",
     department: "VSSUT Burla",
-    image: "/logo.png",
+    image: "/faculty/trs.jpg",
   },
   {
     name: "Mr. Prasanta Kumar Parida",
     role: "Assistant Professor",
     department: "Electrical and Electronics Engineering (EEE)",
-    image: "/logo.png",
+    image: "",
   },
   {
     name: "Mr. Anil Kumar Murmu",
