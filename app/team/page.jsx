@@ -4,72 +4,109 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Sparkles, GraduationCap, ShieldCheck } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import ChromaGrid from "@/components/ui/ChromaGrid";
 
 // Faculty & Leadership Data (Screenshot ke mutabiq)
 const facultyMembers = [
   {
-    name: "Dr. Rakesh Roshan Dash",
-    role: "Dean Students' Welfare",
-    department: "VSSUT Burla",
     image: "/logo.png",
+    title: "Dr. Rakesh Roshan Dash",
+    subtitle: "Dean Students' Welfare",
+    handle: "VSSUT Burla",
+    borderColor: "#ffffff",
+    gradient: "linear-gradient(145deg,#171717,#000)",
+    url: "#"
   },
   {
-    name: "Dr. Trupti Ranjan Mohapatra",
-    role: "Vice President, Technical Society",
-    department: "VSSUT Burla",
     image: "/faculty/trs.jpg",
+    title: "Dr. Trupti Ranjan Mohapatra",
+    subtitle: "Vice President, Technical Society",
+    handle: "VSSUT Burla",
+    borderColor: "#ffffff",
+    gradient: "linear-gradient(145deg,#171717,#000)",
+    url: "#"
   },
   {
-    name: "Mr. Prasanta Kumar Parida",
-    role: "Assistant Professor",
-    department: "Electrical and Electronics Engineering (EEE)",
-    image: "",
-  },
-  {
-    name: "Mr. Anil Kumar Murmu",
-    role: "Assistant Professor",
-    department: "Chemical Engineering Department",
     image: "/logo.png",
+    title: "Mr. Prasanta Kumar Parida",
+    subtitle: "Assistant Professor",
+    handle: "EEE Department",
+    borderColor: "#ffffff",
+    gradient: "linear-gradient(145deg,#171717,#000)",
+    url: "#"
+  },
+  {
+    image: "/logo.png",
+    title: "Mr. Anil Kumar Murmu",
+    subtitle: "Assistant Professor",
+    handle: "Chemical Engineering",
+    borderColor: "#ffffff",
+    gradient: "linear-gradient(145deg,#171717,#000)",
+    url: "#"
   },
 ];
 
 // Student Team Data (Batch wise + Domain + Madhu Sailesh Demo)
 const studentTeam = [
   {
-    name: "Madhu Sailesh Sasamal",
-    domain: "Full Stack Lead",
+    image: "/logo.png",
+    title: "Madhu Sailesh",
+    subtitle: "Full Stack Lead",
+    handle: "Batch 2027",
     batch: 2027,
-    image: "/logo.png",
+    borderColor: "#ffffff",
+    gradient: "linear-gradient(145deg,#171717,#000)",
+    url: "#"
   },
   {
-    name: "Madhu Sailesh Sasamal",
-    domain: "AI / ML Engineer",
+    image: "/logo.png",
+    title: "Madhu Sailesh",
+    subtitle: "AI / ML Engineer",
+    handle: "Batch 2027",
     batch: 2027,
-    image: "/logo.png",
+    borderColor: "#ffffff",
+    gradient: "linear-gradient(145deg,#171717,#000)",
+    url: "#"
   },
   {
-    name: "Madhu Sailesh Sasamal",
-    domain: "UI/UX Designer",
+    image: "/logo.png",
+    title: "Madhu Sailesh",
+    subtitle: "UI/UX Designer",
+    handle: "Batch 2028",
     batch: 2028,
-    image: "/logo.png",
+    borderColor: "#ffffff",
+    gradient: "linear-gradient(145deg,#171717,#000)",
+    url: "#"
   },
   {
-    name: "Madhu Sailesh Sasamal",
-    domain: "Cloud & DevOps",
+    image: "/logo.png",
+    title: "Madhu Sailesh",
+    subtitle: "Cloud & DevOps",
+    handle: "Batch 2028",
     batch: 2028,
-    image: "/logo.png",
+    borderColor: "#ffffff",
+    gradient: "linear-gradient(145deg,#171717,#000)",
+    url: "#"
   },
   {
-    name: "Madhu Sailesh Sasamal",
-    domain: "Competitive Programmer",
-    batch: 2026, // Auto-Alumni check ke liye
     image: "/logo.png",
+    title: "Madhu Sailesh",
+    subtitle: "Competitive Programmer",
+    handle: "Alumni",
+    batch: 2025, // Auto-Alumni check (2025/2026 passed out)
+    borderColor: "#ffffff",
+    gradient: "linear-gradient(145deg,#171717,#000)",
+    url: "#"
   },
   {
-    name: "Madhu Sailesh Sasamal",
-    domain: "App Developer",
-    batch: 2026, // Auto-Alumni check ke liye
     image: "/logo.png",
+    title: "Madhu Sailesh",
+    subtitle: "App Developer",
+    handle: "Alumni",
+    batch: 2025, // Auto-Alumni check
+    borderColor: "#ffffff",
+    gradient: "linear-gradient(145deg,#171717,#000)",
+    url: "#"
   },
 ];
 
@@ -78,9 +115,9 @@ export default function TeamPage() {
 
   const currentYear = new Date().getFullYear(); // 2026
 
-  // Filter logic based on tabs
+  // Filter logic based on tabs (2026 excluded from tabs)
   const filteredStudents = studentTeam.filter((student) => {
-    const isAlumni = student.batch <= 2026; // 2026 aur usse pehle alumni
+    const isAlumni = student.batch <= 2026;
 
     if (selectedTab === "ALL") return true;
     if (selectedTab === "ALUMNI") return isAlumni;
@@ -131,40 +168,19 @@ export default function TeamPage() {
             </motion.p>
           </div>
 
-          {/* FACULTY SECTION */}
+          {/* FACULTY SECTION USING CHROMAGRID */}
           <div className="mb-24">
             <div className="flex items-center gap-3 mb-8">
               <ShieldCheck className="w-6 h-6 text-white" />
               <h2 className="text-2xl sm:text-3xl font-bold tracking-wide uppercase">Faculty Advisors & Leadership</h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {facultyMembers.map((faculty, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group relative p-6 rounded-[24px] bg-neutral-900/70 border border-white/10 backdrop-blur-xl hover:border-white/40 transition-all duration-500 shadow-xl overflow-hidden flex flex-col items-center text-center"
-                >
-                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-
-                  <div className="relative w-24 h-24 rounded-2xl bg-white/5 border border-white/10 p-2 mb-5 overflow-hidden group-hover:scale-105 transition-transform">
-                    <Image src={faculty.image} alt={faculty.name} fill className="object-contain p-2" />
-                  </div>
-
-                  <h3 className="text-lg font-bold text-white mb-1">{faculty.name}</h3>
-                  <p className="text-xs text-gray-300 font-medium mb-2">{faculty.role}</p>
-                  <span className="text-[11px] text-gray-400 font-light px-3 py-1 rounded-full bg-white/5 border border-white/10">
-                    {faculty.department}
-                  </span>
-                </motion.div>
-              ))}
+            <div className="w-full">
+              <ChromaGrid items={facultyMembers} radius={280} damping={0.4} />
             </div>
           </div>
 
-          {/* STUDENT TEAM SECTION WITH FILTER TABS */}
+          {/* STUDENT TEAM SECTION WITH FILTER TABS & CHROMAGRID */}
           <div>
             <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
               <div className="flex items-center gap-3">
@@ -173,7 +189,7 @@ export default function TeamPage() {
               </div>
             </div>
 
-            {/* Filter Buttons Bar */}
+            {/* Filter Buttons Bar (2026 excluded as requested) */}
             <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
               {["ALL", "2027", "2028", "ALUMNI"].map((tab) => (
                 <button
@@ -190,44 +206,12 @@ export default function TeamPage() {
               ))}
             </div>
 
-            {/* Student Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Student Cards Grid using ChromaGrid */}
+            <div className="w-full">
               {filteredStudents.length > 0 ? (
-                filteredStudents.map((student, index) => {
-                  const isAlumni = student.batch <= 2026;
-
-                  return (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.4, delay: index * 0.05 }}
-                      className="group relative p-6 rounded-[24px] bg-neutral-900/70 border border-white/10 backdrop-blur-xl hover:border-white/40 transition-all duration-500 shadow-xl overflow-hidden flex flex-col items-center text-center"
-                    >
-                      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-
-                      <div className="relative w-24 h-24 rounded-full bg-white/5 border border-white/10 p-2 mb-5 overflow-hidden group-hover:scale-105 transition-transform">
-                        <Image src={student.image} alt={student.name} fill className="object-contain p-2" />
-                      </div>
-
-                      <h3 className="text-lg font-bold text-white mb-1">{student.name}</h3>
-                      <p className="text-xs text-gray-300 font-medium mb-4">{student.domain}</p>
-                      
-                      {/* Batch / Alumni Badge */}
-                      <div className="mt-auto">
-                        <span className={`text-[11px] px-3 py-1 rounded-full border ${
-                          isAlumni 
-                            ? "bg-amber-500/10 text-amber-300 border-amber-500/20" 
-                            : "bg-white/5 text-gray-300 border-white/10"
-                        }`}>
-                          {isAlumni ? "Alumni" : `Batch of ${student.batch}`}
-                        </span>
-                      </div>
-                    </motion.div>
-                  );
-                })
+                <ChromaGrid items={filteredStudents} radius={280} damping={0.4} />
               ) : (
-                <div className="col-span-full text-center py-16 text-gray-500 text-sm tracking-wider uppercase">
+                <div className="text-center py-16 text-gray-500 text-sm tracking-wider uppercase">
                   No members found for this batch.
                 </div>
               )}
