@@ -76,13 +76,7 @@ export default function Hero() {
           >
             <span className="text-xs sm:text-sm tracking-widest uppercase">Explore Events</span>
           </Link>
-
-          <Link
-            href="/contact"
-            className="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-3.5 overflow-hidden text-white border border-white/20 rounded-full hover:border-white transition-all duration-300 bg-black/40 backdrop-blur-md shadow-lg"
-          >
-            <span className="text-xs sm:text-sm tracking-widest uppercase font-medium">Join Us</span>
-          </Link>
+ 
         </motion.div>
 
       </div>
