@@ -1,47 +1,56 @@
 "use client";
-
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import DomeGallery from "@/components/ui/DomeGallery";
+import { Sparkles } from "lucide-react";
 
-export default function Gallery() {
+export default function GalleryPage() {
   return (
-    <main className="min-h-screen bg-black text-white overflow-hidden">
+    <main className="min-h-screen bg-black text-white selection:bg-white selection:text-black overflow-hidden">
+      {/* Navbar Integration */}
       <Navbar />
 
-      <section className="relative pt-32 pb-20">
-        {/* Background Glow */}
-        <div className="absolute inset-0 flex justify-center">
-          <div className="w-[600px] h-[600px] rounded-full bg-white/5 blur-[180px]" />
+      <section className="relative pt-32 pb-24 sm:pb-28">
+        
+        {/* Background Ambient Glow */}
+        <div className="absolute inset-0 flex justify-center pointer-events-none">
+          <div className="w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] rounded-full bg-white/5 blur-[180px]" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
-          {/* Heading */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Heading Section */}
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-14"
+            className="text-center space-y-4 mb-12 sm:mb-16"
           >
-            <h1 className="text-5xl md:text-6xl font-black tracking-wide">
+            {/* Top Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/15 backdrop-blur-xl">
+              <Sparkles className="w-4 h-4 text-white animate-pulse" />
+              <span className="text-xs sm:text-sm text-gray-200 font-semibold tracking-widest uppercase">
+                Visual Legacy
+              </span>
+            </div>
+
+            <h1 className="text-4xl sm:text-6xl font-black tracking-wider uppercase bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-500">
               Gallery
             </h1>
 
-            <p className="mt-5 text-gray-400 text-lg max-w-2xl mx-auto">
-              A glimpse into the journey of E-Cell VSSUT through workshops,
-              startup events, hackathons, speaker sessions, competitions and
-              unforgettable moments.
+            <p className="text-gray-400 text-sm sm:text-base font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
+              A glimpse into the journey of E-Cell VSSUT through workshops, startup events, hackathons, speaker sessions, competitions, and unforgettable moments.
             </p>
           </motion.div>
 
-          {/* Glass Container */}
+          {/* Glass Container for DomeGallery */}
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7 }}
-            className="rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-xl overflow-hidden shadow-2xl"
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="rounded-[28px] border border-white/10 bg-neutral-900/60 backdrop-blur-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
           >
-            <div className="h-[75vh]">
+            <div className="h-[60vh] sm:h-[70vh] lg:h-[75vh] w-full relative">
               <DomeGallery
                 fit={1}
                 minRadius={900}
@@ -52,6 +61,7 @@ export default function Gallery() {
               />
             </div>
           </motion.div>
+
         </div>
       </section>
     </main>
