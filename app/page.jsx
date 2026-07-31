@@ -28,7 +28,7 @@ export default function Home() {
 
         {/* Startups Section */}  
 
-        <StartupsPage />
+        {/* <StartupsPage /> */}
       </main>
     </>
   );
