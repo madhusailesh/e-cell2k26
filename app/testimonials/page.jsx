@@ -127,13 +127,14 @@ function TestimonialSlider() {
                   "{testimonial.details}"
                 </p>
 
-                {/* Author Info - Bigger Size & Zoomed Image */}
+                {/* Author Info - Sizes Prop Added */}
                 <div className="flex flex-col items-center gap-3 pt-4">
                   <div className="relative w-28 h-28 rounded-full border-2 border-white/20 overflow-hidden bg-neutral-900 shadow-xl">
                     <Image
                       src={testimonial.url}
                       alt={testimonial.name}
                       fill
+                      sizes="112px"
                       className="object-cover scale-110"
                     />
                   </div>
