@@ -9,7 +9,7 @@ import Loader from "@/components/Loader";
 import StartupsPage from "./startups/page";
 import Gallery from "./gallery/page";
 import WingsPage from "./wings/page";
-
+import TestimonialsPage from "./testimonials/page";
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
@@ -40,6 +40,10 @@ export default function Home() {
 
           {/* Wings */}
           <WingsPage />
+
+          {/* Testimonials */}
+          <TestimonialsPage />
+          
         </main>
       )}
     </>
