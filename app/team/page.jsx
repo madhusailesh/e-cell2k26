@@ -11,7 +11,7 @@ const facultyMembers = [
     name: "Dr. Rakesh Roshan Dash",
     role: "Dean Students' Welfare",
     department: "VSSUT Burla",
-    image: "/logo.png",
+    image: "/faculty/rrd.png",
   },
   {
     name: "Dr. Trupti Ranjan Mohapatra",
@@ -23,13 +23,13 @@ const facultyMembers = [
     name: "Mr. Prasanta Kumar Parida",
     role: "Assistant Professor",
     department: "EEE Department",
-    image: "/logo.png",
+    image: "/faculty/pkp.png",
   },
   {
     name: "Mr. Anil Kumar Murmu",
     role: "Assistant Professor",
     department: "Chemical Engineering",
-    image: "/logo.png",
+    image: "/faculty/akm.png",
   },
 ];
 
