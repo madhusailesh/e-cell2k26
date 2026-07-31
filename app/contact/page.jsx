@@ -219,16 +219,17 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Map embed */}
+              {/* Colorful Map embed */}
               <div className="bg-[#0a0a0a] border border-white/10 rounded-[24px] overflow-hidden h-[240px]">
                 <iframe
                   title="VSSUT Burla Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3699.2882583279147!2d83.9056!3d21.5036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a213f5000000001%3A0x4a2a6f8b5f3a40c!2sVeer%20Surendra%20Sai%20University%20of%20Technology!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1315.5911838876602!2d83.90298366933364!3d21.49585356260758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1785534252262!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
-                  style={{ border: 0, filter: "grayscale(100%) invert(92%) contrast(90%)" }}
+                  style={{ border: 0 }}
                   allowFullScreen=""
                   loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
                 />
               </div>
 
