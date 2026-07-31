@@ -66,11 +66,6 @@ function buildItems(pool, seg) {
   if (pool.length === 0) {
     return coords.map(c => ({ ...c, src: '', alt: '' }));
   }
-  if (pool.length > totalSlots) {
-    console.warn(
-      `[DomeGallery] Provided image count (${pool.length}) exceeds available tiles (${totalSlots}). Some images will not be shown.`
-    );
-  }
 
   const normalizedImages = pool.map(image => {
     if (typeof image === 'string') {
@@ -115,7 +110,7 @@ export default function DomeGallery({
   minRadius = 600,
   maxRadius = Infinity,
   padFactor = 0.25,
-  overlayBlurColor = '#120F17',
+  overlayBlurColor = '#05070B', // Website ke deep black color se match kiya gaya hai
   maxVerticalRotationDeg = DEFAULTS.maxVerticalRotationDeg,
   dragSensitivity = DEFAULTS.dragSensitivity,
   enlargeTransitionMs = DEFAULTS.enlargeTransitionMs,
@@ -125,7 +120,7 @@ export default function DomeGallery({
   openedImageHeight = '400px',
   imageBorderRadius = '30px',
   openedImageBorderRadius = '30px',
-  grayscale = true
+  grayscale = false
 }) {
   const rootRef = useRef(null);
   const mainRef = useRef(null);
@@ -730,16 +725,6 @@ export default function DomeGallery({
       }
     }
     
-    // body.dg-scroll-lock {
-    //   position: fixed !important;
-    //   top: 0;
-    //   left: 0;
-    //   width: 100% !important;
-    //   height: 100% !important;
-    //   overflow: hidden !important;
-    //   touch-action: none !important;
-    //   overscroll-behavior: contain !important;
-    // }
     .item__image {
       position: absolute;
       inset: 10px;
@@ -765,7 +750,7 @@ export default function DomeGallery({
       <style dangerouslySetInnerHTML={{ __html: cssStyles }} />
       <div
         ref={rootRef}
-        className="sphere-root relative w-full h-full"
+        className="sphere-root relative w-full h-full bg-[#05070B]"
         style={{
           ['--segments-x']: segments,
           ['--segments-y']: segments,
@@ -807,7 +792,7 @@ export default function DomeGallery({
                   }}
                 >
                   <div
-                    className="item__image absolute block overflow-hidden cursor-pointer bg-gray-200 transition-transform duration-300"
+                    className="item__image absolute block overflow-hidden cursor-pointer bg-neutral-900 transition-transform duration-300"
                     role="button"
                     tabIndex={0}
                     aria-label={it.alt || 'Open image'}
@@ -851,15 +836,15 @@ export default function DomeGallery({
           <div
             className="absolute inset-0 m-auto z-[3] pointer-events-none"
             style={{
-              backgroundImage: `radial-gradient(rgba(235, 235, 235, 0) 65%, var(--overlay-blur-color, ${overlayBlurColor}) 100%)`
+              backgroundImage: `radial-gradient(rgba(5, 7, 11, 0) 65%, var(--overlay-blur-color, ${overlayBlurColor}) 100%)`
             }}
           />
 
           <div
             className="absolute inset-0 m-auto z-[3] pointer-events-none"
             style={{
-              WebkitMaskImage: `radial-gradient(rgba(235, 235, 235, 0) 70%, var(--overlay-blur-color, ${overlayBlurColor}) 90%)`,
-              maskImage: `radial-gradient(rgba(235, 235, 235, 0) 70%, var(--overlay-blur-color, ${overlayBlurColor}) 90%)`,
+              WebkitMaskImage: `radial-gradient(rgba(5, 7, 11, 0) 70%, var(--overlay-blur-color, ${overlayBlurColor}) 90%)`,
+              maskImage: `radial-gradient(rgba(5, 7, 11, 0) 70%, var(--overlay-blur-color, ${overlayBlurColor}) 90%)`,
               backdropFilter: 'blur(3px)'
             }}
           />
@@ -886,8 +871,8 @@ export default function DomeGallery({
               ref={scrimRef}
               className="scrim absolute inset-0 z-10 pointer-events-none opacity-0 transition-opacity duration-500"
               style={{
-                background: 'rgba(0, 0, 0, 0.4)',
-                backdropFilter: 'blur(3px)'
+                background: 'rgba(5, 7, 11, 0.75)',
+                backdropFilter: 'blur(5px)'
               }}
             />
             <div

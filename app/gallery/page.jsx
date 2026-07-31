@@ -26,29 +26,21 @@ export default function GalleryPage() {
             transition={{ duration: 0.6 }}
             className="text-center space-y-4 mb-12 sm:mb-16"
           >
-            {/* Top Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/15 backdrop-blur-xl">
-              <Sparkles className="w-4 h-4 text-white animate-pulse" />
-              <span className="text-xs sm:text-sm text-gray-200 font-semibold tracking-widest uppercase">
-                Visual Legacy
-              </span>
-            </div>
+             
 
             <h1 className="text-4xl sm:text-6xl font-black tracking-wider uppercase bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-500">
               Gallery
             </h1>
 
-            <p className="text-gray-400 text-sm sm:text-base font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
-              A glimpse into the journey of E-Cell VSSUT through workshops, startup events, hackathons, speaker sessions, competitions, and unforgettable moments.
-            </p>
+             
           </motion.div>
 
-          {/* Glass Container for DomeGallery */}
+          {/* Borderless Glass Container for DomeGallery */}
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="rounded-[28px] border border-white/10 bg-neutral-900/60 backdrop-blur-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
+            className="rounded-[28px] bg-transparent overflow-hidden"
           >
             <div className="h-[60vh] sm:h-[70vh] lg:h-[75vh] w-full relative">
               <DomeGallery
