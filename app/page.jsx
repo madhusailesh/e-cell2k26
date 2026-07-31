@@ -10,6 +10,7 @@ import StartupsPage from "./startups/page";
 import Gallery from "./gallery/page";
 import WingsPage from "./wings/page";
 import TestimonialsPage from "./testimonials/page";
+import Footer from "@/components/Footer";
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
@@ -43,7 +44,8 @@ export default function Home() {
 
           {/* Testimonials */}
           <TestimonialsPage />
-          
+          {/* Footer */}
+          <Footer />
         </main>
       )}
     </>
