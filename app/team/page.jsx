@@ -72,8 +72,8 @@ const studentTeam = [
     branch: "Electronics and Communications Engineering",
     batch: 2027,
     role: "Coordinator",
-    image: "/team/2027/Lipika Ray.png",
-    socials: {
+    image: "/team/2027/Lipika-Ray.png",
+    socials: { 
       linkedin: "https://www.linkedin.com/in/lipika-ray-324995221/",
       instagram: "",
       twitter: "",
