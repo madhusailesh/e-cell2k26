@@ -46,19 +46,45 @@ export default function ContactPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSuccessMsg("Transmission received. We'll connect soon.");
-      setFormData({ firstName: "", lastName: "", email: "", mobile: "", message: "" });
-      
-      setTimeout(() => setSuccessMsg(""), 4000);
-    }, 1000);
-  };
 
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { 
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY, // Yeh 'access_key' hona zaroori hai
+          subject: "New Message from E-Cell VSSUT Website",
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          phone: formData.mobile,
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json();
+      console.log("Web3Forms Result:", result);
+
+      if (result.success) {
+        setSuccessMsg("Transmission received. We'll connect soon.");
+        setFormData({ firstName: "", lastName: "", email: "", mobile: "", message: "" });
+      } else {
+        setSuccessMsg(result.message || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Fetch Error:", error);
+      setSuccessMsg("Error connecting to server.");
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setSuccessMsg(""), 4000);
+    }
+  };
+   
   return (
     <main className="min-h-screen bg-black text-white selection:bg-white selection:text-black font-sans relative">
       <Navbar />
@@ -140,7 +166,7 @@ export default function ContactPage() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="alex@domain.com" 
+                      placeholder="youremail@gmail.com" 
                       className="w-full bg-black border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder:text-neutral-700 focus:outline-none focus:border-white transition-all font-light"
                     />
                   </div>
@@ -201,19 +227,19 @@ export default function ContactPage() {
 
                   <div>
                     <span className="text-xs font-mono text-neutral-500 block uppercase">Phone Line</span>
-                    <p className="text-white mt-0.5">+91 7064214870</p>
+                    <p className="text-white mt-0.5">+91 9556136949</p>
                   </div>
                 </div>
 
                 {/* Social links */}
                 <div className="flex items-center gap-2 pt-2 border-t border-white/10">
-                  <Link href="https://instagram.com" target="_blank" className="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white hover:text-black text-xs font-mono text-neutral-300 transition-all border border-white/10">
+                  <Link href="https://www.instagram.com/ecellvssut/" target="_blank" className="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white hover:text-black text-xs font-mono text-neutral-300 transition-all border border-white/10">
                     Instagram
                   </Link>
-                  <Link href="https://linkedin.com" target="_blank" className="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white hover:text-black text-xs font-mono text-neutral-300 transition-all border border-white/10">
+                  <Link href="https://www.linkedin.com/company/ecellvssut/mycompany/" target="_blank" className="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white hover:text-black text-xs font-mono text-neutral-300 transition-all border border-white/10">
                     LinkedIn
                   </Link>
-                  <Link href="https://x.com" target="_blank" className="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white hover:text-black text-xs font-mono text-neutral-300 transition-all border border-white/10">
+                  <Link href="https://x.com/ecellvssut?lang=en" target="_blank" className="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white hover:text-black text-xs font-mono text-neutral-300 transition-all border border-white/10">
                     Twitter / X
                   </Link>
                 </div>
