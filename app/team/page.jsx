@@ -49,6 +49,38 @@ const studentTeam = [
       github: "https://github.com/madhusailesh",
     },
   },
+{
+  
+    name: "Hara Prasad Rout",
+    domain: "PR",
+    branch: "CIVIL ENGINEERING",
+    batch: 2027,
+    role: "Coordinator",
+    image: "/team/2027/Hara Prasad Rout.png",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/hara-prasad-rout-8a7194293/",
+      instagram: "https://www.instagram.com/__.its_haraa.__",
+      twitter: "",
+      github: "",
+    },
+  },
+  
+{
+  
+    name: "Lipika Ray",
+    domain: "PR",
+    branch: "Electronics and Communications Engineering",
+    batch: 2027,
+    role: "Coordinator",
+    image: "/team/2027/Lipika Ray.png",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/lipika-ray-324995221/",
+      instagram: "",
+      twitter: "",
+      github: "",
+    },
+  },
+
   {
     name: "Pratyush Pradhan",
     domain: "PR",
@@ -94,6 +126,23 @@ const studentTeam = [
       github: "",
     },
   },
+
+{
+    name: "Riya Mishra",
+    domain: "EM",
+    branch: "Electrical and Electronics Engineering",
+    batch: 2028,
+    role: "Assistant Coordinator",
+    image: "/team/2028/riya.png",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/riya-mishra-21b244332/",
+      instagram: "",
+      twitter: "",
+      github: "",
+    },
+  },
+
+
   {
     name: "Tejasvi Nayak",
     domain: "PR",

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -8,11 +9,20 @@ export default function Footer() {
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 pb-16 border-b border-white/10">
           
-          {/* Column 1: Organization Details */}
+          {/* Column 1: Organization Details & Logo */}
           <div className="space-y-4">
-            <h2 className="text-lg font-bold tracking-wider uppercase text-white font-['Syncopate']">
-              <span className="text-neutral-400">E-Cell</span> VSSUT
-            </h2>
+            {/* Logo instead of Text */}
+            <div className="flex items-center">
+              <Link href="/" className="relative block w-32 h-10">
+                <Image 
+                  src="/logo.png" 
+                  alt="E-Cell VSSUT Logo" 
+                  fill 
+                  className="object-contain object-left"
+                />
+              </Link>
+            </div>
+
             <p className="text-sm text-neutral-400 font-light leading-relaxed">
               The Entrepreneurship Cell.<br />
               Burla, Sambalpur<br />
@@ -89,8 +99,9 @@ export default function Footer() {
               href="https://ayush.thedev.id/" 
               target="_blank" 
               className="text-white font-medium hover:underline underline-offset-4 decoration-neutral-500 transition-colors"
-            ><span className="text-neutral-300 font-medium">Ayush Bardhan Tripathy</span></Link>
-            
+            >
+              <span className="text-neutral-300 font-medium">Ayush Bardhan Tripathy</span>
+            </Link>
           </div>
         </div>
 
