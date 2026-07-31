@@ -33,7 +33,7 @@ const facultyMembers = [
   },
 ];
 
-// Student Team Data
+// Student Team Data with Correct Image Paths from public folder
 const studentTeam = [
   {
     name: "Madhu Sailesh Sasamal",
@@ -49,17 +49,15 @@ const studentTeam = [
       github: "https://github.com/madhusailesh",
     },
   },
-
   {
     name: "Pratyush Pradhan",
     domain: "PR",
     branch: "Production Engineering",
     batch: 2028,
     role: "",
-    image: "/team/2028/placeholder.png",
+    image: "/team/2028/Pratyush.png",
     socials: {
-      linkedin:
-        "https://www.linkedin.com/in/pratyush-pradhan-5409b0301?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      linkedin: "https://www.linkedin.com/in/pratyush-pradhan-5409b0301?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       instagram: "https://instagram.com/rishupratyush",
       twitter: "https://x.com/PratyushPratyu5",
       github: "",
@@ -71,10 +69,9 @@ const studentTeam = [
     branch: "Computer Science & Engineering",
     batch: 2028,
     role: "Assistant Coordinator",
-    image: "/team/2028/placeholder.png",
+    image: "/team/2028/swaraj.png",
     socials: {
-      linkedin:
-        "https://www.linkedin.com/in/swaraj-soubhagya-khandai-b273b2384?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      linkedin: "https://www.linkedin.com/in/swaraj-soubhagya-khandai-b273b2384?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       instagram: "",
       twitter: "",
       github: "",
@@ -83,11 +80,10 @@ const studentTeam = [
   {
     name: "Tejasvi Nayak",
     domain: "PR",
-    branch:
-      "Computer Science & Engineering (Artificial Intelligence & Machine Learning)",
+    branch: "Computer Science & Engineering (Artificial Intelligence & Machine Learning)",
     batch: 2028,
     role: "",
-    image: "/team/2028/placeholder.png",
+    image: "/team/2028/Tejasvi Nayak .png",
     socials: {
       linkedin: "https://www.linkedin.com/in/tejasvi-nayak-a6b86a351",
       instagram: "https://instagram.com/tejassviii_iii",
@@ -101,7 +97,7 @@ const studentTeam = [
     branch: "Electronics & Telecommunication Engineering",
     batch: 2028,
     role: "",
-    image: "/team/2028/placeholder.png",
+    image: "/team/2028/Persis Rout.png",
     socials: {
       linkedin: "https://www.linkedin.com/in/persis-rout-7806b6331",
       instagram: "https://www.instagram.com/persis_rout555",
@@ -115,10 +111,9 @@ const studentTeam = [
     branch: "Mechanical Engineering",
     batch: 2028,
     role: "",
-    image: "/team/2028/placeholder.png",
+    image: "/team/2028/Akash Dansana.png",
     socials: {
-      linkedin:
-        "https://www.linkedin.com/in/akash-dansana-4272953a4?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      linkedin: "https://www.linkedin.com/in/akash-dansana-4272953a4?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       instagram: "https://www.instagram.com/uio_jype8?igsh=Mnp5Yml0enF6NW1k",
       twitter: "https://x.com/AkashDansana",
       github: "https://github.com/Akash-decoded",
@@ -129,11 +124,10 @@ const studentTeam = [
     domain: "EM",
     branch: "Electrical Engineering",
     batch: 2028,
-    role: "", // Role khali hone par field hide ho jayegi
-    image: "/team/2028/placeholder.png",
+    role: "",
+    image: "/team/2028/Seetal Priyadarshini Subudhi .png",
     socials: {
-      linkedin:
-        "https://www.linkedin.com/in/seetal-priyadarshini-subudhi-a8a20132a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      linkedin: "https://www.linkedin.com/in/seetal-priyadarshini-subudhi-a8a20132a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       instagram: "https://instagram.com/Seetal015priya",
       twitter: "",
       github: "",
@@ -145,7 +139,7 @@ const studentTeam = [
     branch: "Computer Science & Engineering",
     batch: 2027,
     role: "",
-    image: "/team/2027/placeholder.png",
+    image: "/team/2027/Ayush Kishan.png",
     socials: {
       linkedin: "https://www.linkedin.com/in/ayush-kishan",
       instagram: "",
@@ -159,10 +153,9 @@ const studentTeam = [
     branch: "Computer Science & Engineering",
     batch: 2028,
     role: "",
-    image: "/team/2028/placeholder.png",
+    image: "/team/2028/Aryan Rajguru.png",
     socials: {
-      linkedin:
-        "https://www.linkedin.com/in/aryan-rajguru-a1333230a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      linkedin: "https://www.linkedin.com/in/aryan-rajguru-a1333230a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       instagram: "",
       twitter: "",
       github: "",
@@ -174,7 +167,7 @@ const studentTeam = [
     branch: "Mechanical Engineering",
     batch: 2027,
     role: "",
-    image: "/team/2027/placeholder.png",
+    image: "/team/2027/Ayushman Kar.png",
     socials: {
       linkedin: "https://www.linkedin.com/in/ayushmankar334",
       instagram: "https://www.instagram.com/_ayushman_kar",
@@ -188,12 +181,10 @@ const studentTeam = [
     branch: "Mechanical Engineering",
     batch: 2027,
     role: "",
-    image: "/team/2027/placeholder.png",
+    image: "/team/2027/Pratikshya Mohapatra.png",
     socials: {
-      linkedin:
-        "https://www.linkedin.com/in/moprati04?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-      instagram:
-        "https://www.instagram.com/prati_kshya04?igsh=OWw5OWRzNnZqNDc5",
+      linkedin: "https://www.linkedin.com/in/moprati04?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      instagram: "https://www.instagram.com/prati_kshya04?igsh=OWw5OWRzNnZqNDc5",
       twitter: "",
       github: "",
     },
@@ -204,7 +195,7 @@ const studentTeam = [
     branch: "Chemical Engineering",
     batch: 2028,
     role: "",
-    image: "/team/2028/placeholder.png",
+    image: "/team/2028/Kiranjyoti Nath.png",
     socials: {
       linkedin: "https://www.linkedin.com/in/kiranjyoti-nath-213aa9348",
       instagram: "https://instagram.com/nath_kiran10",
@@ -218,10 +209,9 @@ const studentTeam = [
     branch: "Mechanical Engineering",
     batch: 2028,
     role: "",
-    image: "/team/2028/placeholder.png",
+    image: "/team/2028/Abhisek Tripathy.png",
     socials: {
-      linkedin:
-        "https://www.linkedin.com/in/abhisek-tripathy-07b6ba411?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      linkedin: "https://www.linkedin.com/in/abhisek-tripathy-07b6ba411?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       instagram: "",
       twitter: "",
       github: "",
@@ -288,6 +278,7 @@ export default function TeamPage() {
 
       <section className="relative w-full pt-44 pb-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          
           {/* Massive Header with Skeleton & Letter-by-Letter Typing Effect */}
           <div className="text-center space-y-4 mb-20">
             <div className="h-24 sm:h-36 flex items-center justify-center font-['Syncopate']">
@@ -386,6 +377,7 @@ export default function TeamPage() {
                       className="group relative h-[420px] w-full [perspective:1200px]"
                     >
                       <div className="relative h-full w-full rounded-[20px] transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                        
                         {/* FRONT FACE */}
                         <div className="absolute inset-0 h-full w-full rounded-[20px] bg-[#0d0d0d] border border-white/10 p-6 flex flex-col items-center justify-center text-center [backface-visibility:hidden]">
                           <div className="relative w-36 h-36 rounded-full border-2 border-white/30 p-1 mb-4 overflow-hidden bg-black">
@@ -430,7 +422,7 @@ export default function TeamPage() {
                               {student.role}
                             </div>
                           )}
-
+                          
                           {/* Domain Highlight Badge */}
                           <div className="mb-2 px-3.5 py-1 rounded-full bg-white text-black font-extrabold text-[11px] tracking-widest uppercase">
                             {student.domain}
@@ -442,6 +434,7 @@ export default function TeamPage() {
 
                           {/* Conditional Social Media SVG Logos Bar */}
                           <div className="flex items-center justify-center gap-2.5 flex-wrap">
+                            
                             {/* LinkedIn */}
                             {student.socials.linkedin && (
                               <Link
@@ -509,8 +502,10 @@ export default function TeamPage() {
                                 </svg>
                               </Link>
                             )}
+
                           </div>
                         </div>
+
                       </div>
                     </motion.div>
                   );
@@ -521,7 +516,9 @@ export default function TeamPage() {
                 </div>
               )}
             </div>
+
           </div>
+
         </div>
       </section>
     </main>
