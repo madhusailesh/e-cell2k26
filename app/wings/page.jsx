@@ -35,12 +35,7 @@ export default function WingsPage() {
                 Our Wings
               </h1>
 
-              <p className="text-gray-400 mt-6 max-w-2xl mx-auto leading-8">
-                Every wing at E-Cell VSSUT has a unique purpose. From internships
-                and startup acceleration to collaborations, each division works
-                together to build a strong entrepreneurial ecosystem.
-              </p>
-
+              
             </motion.div>
 
             {/* Cards */}

@@ -8,6 +8,7 @@ import EventsPage from "./events/page";
 import Loader from "@/components/Loader";
 import StartupsPage from "./startups/page";
 import Gallery from "./gallery/page";
+import WingsPage from "./wings/page";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -35,6 +36,10 @@ export default function Home() {
 
           {/* Gallery */}
           <Gallery />
+
+
+          {/* Wings */}
+          <WingsPage />
         </main>
       )}
     </>
