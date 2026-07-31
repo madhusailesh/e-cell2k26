@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import FloatingLines from "./ui/FloatingLines";
+import DotField from "./ui/DotField";
 
 export default function Hero() {
   return (
@@ -9,17 +9,20 @@ export default function Hero() {
       
       {/* Background Floating Lines Effect with Deep Contrast */}
       <div className="absolute inset-0 z-0 pointer-events-auto opacity-90">
-        <FloatingLines 
-          enabledWaves={["top", "middle", "bottom"]}
-          lineCount={8}
-          lineDistance={8}
-          bendRadius={8}
-          bendStrength={-2}
-          interactive={true}
-          parallax={true}
-          animationSpeed={1}
-          linesGradient={['#000000', '#ffffff', '#aaaaaa', '#000000']}
-        />
+         <DotField
+    dotRadius={1.5}
+    dotSpacing={14}
+    bulgeStrength={67}
+    glowRadius={160}
+    sparkle={false}
+    waveAmplitude={0}
+    cursorRadius={500}
+    cursorForce={0.1}
+    bulgeOnly
+    gradientFrom="#A855F7"
+    gradientTo="#B497CF"
+    glowColor="#120F17"
+/>
       </div>
 
       {/* Rich Dark Gradient Overlay for Deep Black Look */}
