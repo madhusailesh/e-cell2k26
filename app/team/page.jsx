@@ -318,22 +318,7 @@ export default function TeamPage() {
             </p>
           </div>
 
-          {/* FILTER TABS */}
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-20 font-['Syncopate']">
-            {["ALL", "2027", "2028", "ALUMNI"].map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setSelectedTab(tab)}
-                className={`px-7 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 border ${
-                  selectedTab === tab
-                    ? "bg-white text-black border-white font-bold"
-                    : "bg-transparent text-neutral-400 border-white/10 hover:border-white/30 hover:text-white"
-                }`}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
+         
 
           {/* FACULTY SECTION */}
           <div className="mb-28">
@@ -370,12 +355,27 @@ export default function TeamPage() {
               ))}
             </div>
           </div>
-
+ {/* FILTER TABS */}
+          <div className="flex flex-wrap items-center justify-center gap-3 mb-20 font-['Syncopate']">
+            {["ALL", "2027", "2028", "ALUMNI"].map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setSelectedTab(tab)}
+                className={`px-7 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 border ${
+                  selectedTab === tab
+                    ? "bg-white text-black border-white font-bold"
+                    : "bg-transparent text-neutral-400 border-white/10 hover:border-white/30 hover:text-white"
+                }`}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
           {/* STUDENT TEAM SECTION WITH FLIP CARDS */}
           <div>
             <div className="flex items-center justify-between mb-10 border-b border-white/10 pb-4">
               <h2 className="text-xl font-medium tracking-wide text-neutral-200">
-                Student Board
+                CORE MEMBERS
               </h2>
             </div>
 
