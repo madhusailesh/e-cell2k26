@@ -6,6 +6,7 @@ import About from "./about/page";
 import EventsPage from "./events/page";
 import Loader from "@/components/Loader";
 import StartupsPage from "./startups/page";
+import Gallery from "./gallery/page";
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
@@ -29,6 +30,9 @@ export default function Home() {
         {/* Startups Section */}  
 
         {/* <StartupsPage /> */}
+
+        {/* Gallery Section */}
+        <Gallery />
       </main>
     </>
   );

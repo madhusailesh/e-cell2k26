@@ -1,33 +1,34 @@
+"use client";
 import { useEffect, useMemo, useRef, useCallback } from 'react';
 import { useGesture } from '@use-gesture/react';
 
 const DEFAULT_IMAGES = [
   {
-    src: 'https://images.unsplash.com/photo-1755331039789-7e5680e26e8f?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    src: 'https://ecellnew-website-one.vercel.app/static/media/b1.4502a3d4085ac4f7b706.webp',
     alt: 'Abstract art'
   },
   {
-    src: 'https://images.unsplash.com/photo-1755569309049-98410b94f66d?q=80&w=772&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    src: 'https://ecellnew-website-one.vercel.app/static/media/a1.74242a3e74db8bc18850.webp',
     alt: 'Modern sculpture'
   },
   {
-    src: 'https://images.unsplash.com/photo-1755497595318-7e5e3523854f?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    src: 'https://ecellnew-website-one.vercel.app/static/media/b3.d27a963b90f013ab4ae2.webp',
     alt: 'Digital artwork'
   },
   {
-    src: 'https://images.unsplash.com/photo-1755353985163-c2a0fe5ac3d8?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    src: 'https://ecellnew-website-one.vercel.app/static/media/a2.2a575031ed37b32831b3.jpeg',
     alt: 'Contemporary art'
   },
   {
-    src: 'https://images.unsplash.com/photo-1745965976680-d00be7dc0377?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    src: 'https://ecellnew-website-one.vercel.app/static/media/b2.7415a52e615aca2e5e6a.webp',
     alt: 'Geometric pattern'
   },
   {
-    src: 'https://images.unsplash.com/photo-1752588975228-21f44630bb3c?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    src: 'https://ecellnew-website-one.vercel.app/static/media/a3.251d86011c756fe4ea5f.jpeg',
     alt: 'Textured surface'
   },
   {
-    src: 'https://pbs.twimg.com/media/Gyla7NnXMAAXSo_?format=jpg&name=large',
+    src: 'https://ecellnew-website-one.vercel.app/static/media/c2.a10799a411a545ba7c61.jpg',
     alt: 'Social media image'
   }
 ];
