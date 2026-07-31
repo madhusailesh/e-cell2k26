@@ -33,7 +33,7 @@ const facultyMembers = [
   },
 ];
 
-// Student Team Data with Correct Image Paths from public folder
+// Student Team Data
 const studentTeam = [
   {
     name: "Madhu Sailesh Sasamal",
@@ -49,8 +49,7 @@ const studentTeam = [
       github: "https://github.com/madhusailesh",
     },
   },
-{
-  
+  {
     name: "Hara Prasad Rout",
     domain: "PR",
     branch: "CIVIL ENGINEERING",
@@ -64,9 +63,7 @@ const studentTeam = [
       github: "",
     },
   },
-  
-{
-  
+  {
     name: "Lipika Ray",
     domain: "PR",
     branch: "Electronics and Communications Engineering",
@@ -80,7 +77,6 @@ const studentTeam = [
       github: "",
     },
   },
-
   {
     name: "Pratyush Pradhan",
     domain: "PR",
@@ -95,8 +91,7 @@ const studentTeam = [
       github: "",
     },
   },
-
-{
+  {
     name: "Ayush Bardhan Tripathy",
     domain: "TECH",
     branch: "Computer Science & Engineering",
@@ -110,8 +105,6 @@ const studentTeam = [
       github: "https://github.com/iddev5",
     },
   },
-
-
   {
     name: "Swaraj Soubhagya Khandai",
     domain: "EM",
@@ -126,8 +119,7 @@ const studentTeam = [
       github: "",
     },
   },
-
-{
+  {
     name: "Riya Mishra",
     domain: "EM",
     branch: "Electrical and Electronics Engineering",
@@ -141,12 +133,10 @@ const studentTeam = [
       github: "",
     },
   },
-
-
   {
     name: "Tejasvi Nayak",
     domain: "PR",
-    branch: "Computer Science & Engineering (Artificial Intelligence & Machine Learning)",
+    branch: "Computer Science & Engineering (AI & ML)",
     batch: 2028,
     role: "",
     image: "/team/2028/Tejasvi Nayak .png",
@@ -289,6 +279,7 @@ export default function TeamPage() {
   const [selectedTab, setSelectedTab] = useState("ALL");
   const [isLoading, setIsLoading] = useState(true);
   const [displayedText, setDisplayedText] = useState("");
+  const [flippedIndex, setFlippedIndex] = useState(null); // Mobile flip state tracker
   const fullText = "OUR TEAM";
 
   // Page Refresh / Load Typing Effect & Skeleton Simulation
@@ -312,7 +303,7 @@ export default function TeamPage() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Filter & Precise Sorting Logic (1st: Coordinator, 2nd: Assistant Coordinator, 3rd: Others)
+  // Filter & Precise Sorting Logic
   const filteredStudents = studentTeam
     .filter((student) => {
       const isAlumni = student.batch <= 2025;
@@ -332,7 +323,7 @@ export default function TeamPage() {
     });
 
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-white selection:text-black font-sans">
+    <main className="min-h-screen bg-black text-white selection:bg-white selection:text-black font-sans overflow-x-hidden">
       <Navbar />
 
       {/* Blueprint Background Elements */}
@@ -342,16 +333,16 @@ export default function TeamPage() {
         <div className="absolute w-[1px] h-full bg-white/5" />
       </div>
 
-      <section className="relative w-full pt-44 pb-32 overflow-hidden">
+      <section className="relative w-full pt-32 sm:pt-44 pb-24 sm:pb-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
-          {/* Massive Header with Skeleton & Letter-by-Letter Typing Effect */}
-          <div className="text-center space-y-4 mb-20">
-            <div className="h-24 sm:h-36 flex items-center justify-center font-['Syncopate']">
+          {/* Massive Header */}
+          <div className="text-center space-y-4 mb-14 sm:mb-20">
+            <div className="h-20 sm:h-36 flex items-center justify-center font-['Syncopate']">
               {isLoading ? (
-                <div className="w-80 sm:w-[500px] h-16 sm:h-20 bg-neutral-900 animate-pulse rounded-2xl border border-white/10" />
+                <div className="w-64 sm:w-[500px] h-14 sm:h-20 bg-neutral-900 animate-pulse rounded-2xl border border-white/10" />
               ) : (
-                <h1 className="text-5xl sm:text-8xl font-black tracking-[0.2em] uppercase text-white">
+                <h1 className="text-3xl sm:text-6xl md:text-8xl font-black tracking-[0.15em] sm:tracking-[0.2em] uppercase text-white px-2">
                   {displayedText.split("").map((char, idx) => (
                     <span key={idx} className="inline-block text-white">
                       {char}
@@ -362,32 +353,31 @@ export default function TeamPage() {
               )}
             </div>
 
-            <p className="text-xs sm:text-sm uppercase tracking-[0.4em] text-neutral-400 font-medium">
+            <p className="text-[11px] sm:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em] text-neutral-400 font-medium">
               MEET OUR MEMBERS
             </p>
           </div>
 
-         
-
           {/* FACULTY SECTION */}
-          <div className="mb-28">
-            <div className="flex items-center gap-2.5 mb-10 border-b border-white/10 pb-4">
-              <h2 className="text-xl font-medium tracking-wide text-neutral-200">
+          <div className="mb-20 sm:mb-28">
+            <div className="flex items-center gap-2.5 mb-8 sm:mb-10 border-b border-white/10 pb-4">
+              <h2 className="text-lg sm:text-xl font-medium tracking-wide text-neutral-200">
                 Advisors & Leadership
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {facultyMembers.map((faculty, index) => (
                 <div
                   key={index}
-                  className="group relative p-6 rounded-[20px] bg-[#0d0d0d] border border-white/10 hover:border-white/30 transition-all duration-500 flex flex-col items-center text-center"
+                  className="group relative p-6 rounded-[20px] bg-[#0d0d0d] border border-white/10 hover:border-white/30 transition-all duration-500 flex flex-col items-center text-center shadow-lg"
                 >
-                  <div className="relative w-36 h-36 rounded-full border-2 border-white/20 p-1 mb-5 overflow-hidden bg-black">
+                  <div className="relative w-32 h-32 sm:w-36 sm:h-36 rounded-full border-2 border-white/20 p-1 mb-5 overflow-hidden bg-black">
                     <Image
                       src={faculty.image}
                       alt={faculty.name}
                       fill
+                      sizes="(max-width: 768px) 144px, 144px"
                       className="object-cover rounded-full group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
@@ -404,13 +394,14 @@ export default function TeamPage() {
               ))}
             </div>
           </div>
- {/* FILTER TABS */}
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-20 font-['Syncopate']">
+
+          {/* FILTER TABS */}
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12 sm:mb-20 font-['Syncopate']">
             {["ALL", "2027", "2028", "ALUMNI"].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setSelectedTab(tab)}
-                className={`px-7 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 border ${
+                className={`px-5 sm:px-7 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs font-semibold tracking-wider uppercase transition-all duration-300 border ${
                   selectedTab === tab
                     ? "bg-white text-black border-white font-bold"
                     : "bg-transparent text-neutral-400 border-white/10 hover:border-white/30 hover:text-white"
@@ -420,19 +411,21 @@ export default function TeamPage() {
               </button>
             ))}
           </div>
-          {/* STUDENT TEAM SECTION WITH FLIP CARDS */}
+
+          {/* STUDENT TEAM SECTION WITH FULL RESPONSIVE FLIP CARDS */}
           <div>
-            <div className="flex items-center justify-between mb-10 border-b border-white/10 pb-4">
-              <h2 className="text-xl font-medium tracking-wide text-neutral-200">
+            <div className="flex items-center justify-between mb-8 sm:mb-10 border-b border-white/10 pb-4">
+              <h2 className="text-lg sm:text-xl font-medium tracking-wide text-neutral-200">
                 CORE MEMBERS
               </h2>
             </div>
 
             {/* Student Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 perspective-[1200px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 perspective-[1200px]">
               {filteredStudents.length > 0 ? (
                 filteredStudents.map((student, index) => {
                   const isAlumni = student.batch <= 2025;
+                  const isFlipped = flippedIndex === index;
 
                   return (
                     <motion.div
@@ -440,27 +433,33 @@ export default function TeamPage() {
                       initial={{ opacity: 0, y: 15 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.4, delay: index * 0.04 }}
-                      className="group relative h-[420px] w-full [perspective:1200px]"
+                      onClick={() => setFlippedIndex(isFlipped ? null : index)} // Click/Tap to flip on mobile/tablet
+                      className="group relative h-[420px] w-full [perspective:1200px] cursor-pointer"
                     >
-                      <div className="relative h-full w-full rounded-[20px] transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                      <div 
+                        className={`relative h-full w-full rounded-[20px] transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] ${
+                          isFlipped ? "[transform:rotateY(180deg)]" : ""
+                        }`}
+                      >
                         
                         {/* FRONT FACE */}
-                        <div className="absolute inset-0 h-full w-full rounded-[20px] bg-[#0d0d0d] border border-white/10 p-6 flex flex-col items-center justify-center text-center [backface-visibility:hidden]">
-                          <div className="relative w-36 h-36 rounded-full border-2 border-white/30 p-1 mb-4 overflow-hidden bg-black">
+                        <div className="absolute inset-0 h-full w-full rounded-[20px] bg-[#0d0d0d] border border-white/10 p-6 flex flex-col items-center justify-center text-center [backface-visibility:hidden] shadow-lg">
+                          <div className="relative w-32 h-32 sm:w-36 sm:h-36 rounded-full border-2 border-white/30 p-1 mb-4 overflow-hidden bg-black">
                             <Image
                               src={student.image}
                               alt={student.name}
                               fill
+                              sizes="(max-width: 768px) 144px, 144px"
                               className="object-cover rounded-full"
                             />
                           </div>
-                          <h3 className="text-lg font-bold text-white tracking-wide font-['Syncopate']">
+                          <h3 className="text-base sm:text-lg font-bold text-white tracking-wide font-['Syncopate']">
                             {student.name}
                           </h3>
 
                           {/* Conditional Role Badge on Front */}
                           {student.role && (
-                            <div className="mt-2 px-3.5 py-1 rounded-md bg-neutral-800 border border-neutral-700 text-neutral-200 text-[11px] font-semibold tracking-widest uppercase">
+                            <div className="mt-2 px-3.5 py-1 rounded-md bg-neutral-800 border border-neutral-700 text-neutral-200 text-[10px] sm:text-[11px] font-semibold tracking-widest uppercase">
                               {student.role}
                             </div>
                           )}
@@ -474,11 +473,15 @@ export default function TeamPage() {
                           >
                             {isAlumni ? "Alumni" : `Batch ${student.batch}`}
                           </span>
+
+                          <span className="text-[10px] text-neutral-500 mt-4 tracking-widest uppercase block lg:hidden">
+                            (Tap to flip)
+                          </span>
                         </div>
 
                         {/* BACK FACE */}
-                        <div className="absolute inset-0 h-full w-full rounded-[20px] bg-[#0b0b0b] border border-white/20 p-6 flex flex-col items-center justify-center text-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                          <h3 className="text-base font-bold text-white mb-1 leading-tight">
+                        <div className="absolute inset-0 h-full w-full rounded-[20px] bg-[#0b0b0b] border border-white/20 p-6 flex flex-col items-center justify-center text-center [transform:rotateY(180deg)] [backface-visibility:hidden] shadow-lg">
+                          <h3 className="text-sm sm:text-base font-bold text-white mb-1 leading-tight">
                             {student.name}
                           </h3>
 
@@ -506,6 +509,7 @@ export default function TeamPage() {
                               <Link
                                 href={student.socials.linkedin}
                                 target="_blank"
+                                onClick={(e) => e.stopPropagation()} // Prevent card flip toggle when clicking link
                                 className="p-2.5 rounded-xl bg-white/[0.08] hover:bg-white hover:text-black text-neutral-200 transition-all border border-white/15"
                                 title="LinkedIn"
                               >
@@ -523,6 +527,7 @@ export default function TeamPage() {
                               <Link
                                 href={student.socials.instagram}
                                 target="_blank"
+                                onClick={(e) => e.stopPropagation()}
                                 className="p-2.5 rounded-xl bg-white/[0.08] hover:bg-white hover:text-black text-neutral-200 transition-all border border-white/15"
                                 title="Instagram"
                               >
@@ -540,6 +545,7 @@ export default function TeamPage() {
                               <Link
                                 href={student.socials.twitter}
                                 target="_blank"
+                                onClick={(e) => e.stopPropagation()}
                                 className="p-2.5 rounded-xl bg-white/[0.08] hover:bg-white hover:text-black text-neutral-200 transition-all border border-white/15"
                                 title="X (Twitter)"
                               >
@@ -557,6 +563,7 @@ export default function TeamPage() {
                               <Link
                                 href={student.socials.github}
                                 target="_blank"
+                                onClick={(e) => e.stopPropagation()}
                                 className="p-2.5 rounded-xl bg-white/[0.08] hover:bg-white hover:text-black text-neutral-200 transition-all border border-white/15"
                                 title="GitHub"
                               >
