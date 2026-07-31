@@ -28,18 +28,7 @@ export default function Hero() {
       {/* Foreground Content */}
       <div className="relative z-10 max-w-5xl mx-auto text-center space-y-6 pt-20 sm:pt-0 pointer-events-none">
         
-        {/* Top Tagline Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md pointer-events-auto shadow-inner"
-        >
-          <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-          <span className="text-[10px] sm:text-xs md:text-sm text-gray-300 font-medium tracking-widest uppercase">
-            Innovate • Create • Scale
-          </span>
-        </motion.div>
+         
 
         {/* Main Heading */}
         <motion.div

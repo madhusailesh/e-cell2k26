@@ -130,17 +130,7 @@ export default function StartupsPage() {
           
           {/* Section Header */}
           <div className="text-center space-y-4 mb-20">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md"
-            >
-              <Sparkles className="w-4 h-4 text-white animate-pulse" />
-              <span className="text-xs sm:text-sm text-gray-300 font-medium tracking-widest uppercase">
-                Invention & Incubation
-              </span>
-            </motion.div>
+             
 
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
