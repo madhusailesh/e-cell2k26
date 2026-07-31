@@ -137,17 +137,7 @@ export default function TeamPage() {
           
           {/* Header */}
           <div className="text-center space-y-5 mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/15 backdrop-blur-xl"
-            >
-              <Sparkles className="w-4 h-4 text-white animate-spin" />
-              <span className="text-xs sm:text-sm text-gray-200 font-semibold tracking-widest uppercase">
-                The Minds Behind E-Cell
-              </span>
-            </motion.div>
+            
 
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
@@ -158,14 +148,7 @@ export default function TeamPage() {
               Our Team
             </motion.h1>
 
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-gray-400 text-sm sm:text-base font-light tracking-wide max-w-2xl mx-auto"
-            >
-              Guiding mentors and passionate student innovators driving the entrepreneurial culture at VSSUT Burla.
-            </motion.p>
+            
           </div>
 
           {/* FACULTY SECTION USING CHROMAGRID */}
@@ -183,10 +166,7 @@ export default function TeamPage() {
           {/* STUDENT TEAM SECTION WITH FILTER TABS & CHROMAGRID */}
           <div>
             <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
-              <div className="flex items-center gap-3">
-                <GraduationCap className="w-6 h-6 text-white" />
-                <h2 className="text-2xl sm:text-3xl font-bold tracking-wide uppercase">Student Executive Board</h2>
-              </div>
+               
             </div>
 
             {/* Filter Buttons Bar (2026 excluded as requested) */}
