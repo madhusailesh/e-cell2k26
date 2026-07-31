@@ -30,7 +30,111 @@ const DEFAULT_IMAGES = [
   {
     src: 'https://ecellnew-website-one.vercel.app/static/media/c2.a10799a411a545ba7c61.jpg',
     alt: 'Social media image'
-  }
+  },
+    {
+    src: "https://i.ibb.co/HDMt81tS/IMG-20251101-181035.jpg",
+    alt: "Gallery image 1",
+  },
+  {
+    src: "https://i.ibb.co/n8PVkG27/IMG-20250814-WA0191.jpg",
+    alt: "Gallery image 2",
+  },
+  {
+    src: "https://i.ibb.co/KcHFQks1/IMG-20250814-WA0192.jpg",
+    alt: "Gallery image 3",
+  },
+  {
+    src: "https://i.ibb.co/TM1zRrTg/IMG-20250814-WA0195.jpg",
+    alt: "Gallery image 4",
+  },
+  {
+    src: "https://i.ibb.co/5WdJvcgg/IMG-20250814-WA0199.jpg",
+    alt: "Gallery image 5",
+  },
+  {
+    src: "https://i.ibb.co/LXbZj4zw/IMG-1316.avif",
+    alt: "Gallery image 6",
+  },
+  {
+    src: "https://i.ibb.co/SXXzw6Cd/IMG-5794.avif",
+    alt: "Gallery image 7",
+  },
+  {
+    src: "https://i.ibb.co/twzk7x28/IMG-5796.avif",
+    alt: "Gallery image 8",
+  },
+  {
+    src: "https://i.ibb.co/wFvRGYkp/IMG-5805.avif",
+    alt: "Gallery image 9",
+  },
+  {
+    src: "https://i.ibb.co/JjvVs5JB/IMG-6445.avif",
+    alt: "Gallery image 10",
+  },
+  {
+    src: "https://i.ibb.co/hFYmdT28/IMG-6481.jpg",
+    alt: "Gallery image 11",
+  },
+  {
+    src: "https://i.ibb.co/gbFP2sXc/IMG-6492.jpg",
+    alt: "Gallery image 12",
+  },
+  {
+    src: "https://i.ibb.co/N2sX9ryL/IMG-6498.jpg",
+    alt: "Gallery image 13",
+  },
+  {
+    src: "https://i.ibb.co/ksnbJhL4/IMG-6506.jpg",
+    alt: "Gallery image 14",
+  },
+  {
+    src: "https://i.ibb.co/B5k1JMWc/IMG-6519.avif",
+    alt: "Gallery image 15",
+  },
+  {
+    src: "https://i.ibb.co/r2Jw6nk2/IMG-20250501-185719.jpg",
+    alt: "Gallery image 16",
+  },
+  {
+    src: "https://i.ibb.co/4R39d72g/IMG-20251101-112459.jpg",
+    alt: "Gallery image 17",
+  },
+  {
+    src: "https://i.ibb.co/cXbjJ8mg/IMG-20251101-114815.jpg",
+    alt: "Gallery image 18",
+  },
+  {
+    src: "https://i.ibb.co/Z6y40wc1/IMG-20251101-123031.jpg",
+    alt: "Gallery image 19",
+  },
+  {
+    src: "https://i.ibb.co/F4RHd4kS/IMG-20251101-123033.jpg",
+    alt: "Gallery image 20",
+  },
+  {
+    src: "https://i.ibb.co/whwSxd97/IMG-20251101-130824.jpg",
+    alt: "Gallery image 21",
+  },
+  {
+    src: "https://i.ibb.co/Q70h78kd/IMG-20251101-130838.jpg",
+    alt: "Gallery image 22",
+  },
+  {
+    src: "https://i.ibb.co/kVK8Sx4s/IMG-20251101-131623.jpg",
+    alt: "Gallery image 23",
+  },
+  {
+    src: "https://i.ibb.co/bRmjmXM5/IMG-20251101-162240.jpg",
+    alt: "Gallery image 24",
+  },
+  {
+    src: "https://i.ibb.co/My7BKVxv/IMG-20251101-162243.jpg",
+    alt: "Gallery image 25",
+  },
+  {
+    src: "https://i.ibb.co/ccvp9FkW/IMG-20251101-173328.jpg",
+    alt: "Gallery image 26",
+  }, 
 ];
 
 const DEFAULTS = {
