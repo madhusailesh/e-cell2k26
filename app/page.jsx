@@ -11,6 +11,7 @@ import Gallery from "./gallery/page";
 import WingsPage from "./wings/page";
 import TestimonialsPage from "./testimonials/page";
 import Footer from "@/components/Footer";
+import ContactPage from "./contact/page";
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
@@ -44,8 +45,11 @@ export default function Home() {
 
           {/* Testimonials */}
           <TestimonialsPage />
+
+          {/* Contact */}
+          <ContactPage />
           {/* Footer */}
-          <Footer />
+          {/* <Footer /> */}
         </main>
       )}
     </>
