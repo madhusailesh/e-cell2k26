@@ -32,7 +32,7 @@ export default function Home() {
           <WingsPage />
           <TestimonialsPage />
           <ContactPage />
-          
+            <Footer />
         </main>
       )}
     </>

@@ -1,17 +1,43 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
+import LineWaves from "./ui/LineWaves";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-black text-white border-t border-white/10 pt-16 pb-8 relative z-20 font-sans">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="w-full bg-transparent text-white border-t border-white/10 pt-16 pb-8 relative z-20 font-sans overflow-hidden backdrop-blur-md">
+      
+      {/* Background LineWaves Interactive Effect */}
+      <div className="absolute inset-0 z-0 pointer-events-auto opacity-50">
+        <LineWaves
+          speed={0.3}
+          innerLineCount={32}
+          outerLineCount={36}
+          warpIntensity={1}
+          rotation={-45}
+          edgeFadeWidth={0}
+          colorCycleSpeed={1}
+          brightness={0.2}
+          color1="#ffffff"
+          color2="#ffffff"
+          color3="#ffffff"
+          enableMouseInteraction
+          mouseInfluence={2}
+        />
+      </div>
+
+      {/* Ultra-Transparent Smooth Gradient Overlay */}
+      <div className="absolute inset-0 z-1 bg-gradient-to-t from-black/90 via-black/50 to-transparent pointer-events-none" />
+
+      {/* Foreground Content Container */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 pb-16 border-b border-white/10">
+        {/* Main Footer Grid - Fully Responsive */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-12 lg:gap-16 pb-12 sm:pb-16 border-b border-white/10">
           
           {/* Column 1: Organization Details & Logo */}
-          <div className="space-y-4">
-            {/* Logo instead of Text */}
+          <div className="space-y-4 sm:col-span-2 md:col-span-1">
+            {/* Logo */}
             <div className="flex items-center">
               <Link href="/" className="relative block w-32 h-10">
                 <Image 
@@ -23,28 +49,28 @@ export default function Footer() {
               </Link>
             </div>
 
-            <p className="text-sm text-neutral-400 font-light leading-relaxed">
+            <p className="text-sm text-neutral-300 font-light leading-relaxed">
               The Entrepreneurship Cell.<br />
               Burla, Sambalpur<br />
               768018
             </p>
-            <div className="text-sm text-neutral-300 space-y-1 font-light pt-2">
+            <div className="text-sm text-neutral-200 space-y-1 font-light pt-2">
               <p><strong className="text-white font-medium">Phone:</strong> 9556136949</p>
               <p><strong className="text-white font-medium">Email:</strong> ecellvssut@gmail.com</p>
             </div>
 
             {/* Social Icons (SVGs) */}
-            <div className="flex items-center gap-3 pt-3">
-              <Link href="https://x.com/ecellvssut?lang=en" target="_blank" className="p-2.5 rounded-full bg-neutral-900 hover:bg-white hover:text-black text-neutral-300 transition-all border border-white/10" title="X (Twitter)">
+            <div className="flex items-center gap-3 pt-3 flex-wrap">
+              <Link href="https://x.com/ecellvssut?lang=en" target="_blank" className="p-2.5 rounded-full bg-white/[0.06] hover:bg-white hover:text-black text-neutral-200 transition-all border border-white/10 backdrop-blur-md" title="X (Twitter)">
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               </Link>
-              <Link href="https://www.facebook.com/ecellvssut/" target="_blank" className="p-2.5 rounded-full bg-neutral-900 hover:bg-white hover:text-black text-neutral-300 transition-all border border-white/10" title="Facebook">
+              <Link href="https://www.facebook.com/ecellvssut/" target="_blank" className="p-2.5 rounded-full bg-white/[0.06] hover:bg-white hover:text-black text-neutral-200 transition-all border border-white/10 backdrop-blur-md" title="Facebook">
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.37 14.5 5 15.5 5H18V0h-3.808C10.59 0 9 1.588 9 4.7V8z"/></svg>
               </Link>
-              <Link href="https://www.instagram.com/ecellvssut/?hl=en" target="_blank" className="p-2.5 rounded-full bg-neutral-900 hover:bg-white hover:text-black text-neutral-300 transition-all border border-white/10" title="Instagram">
+              <Link href="https://www.instagram.com/ecellvssut/?hl=en" target="_blank" className="p-2.5 rounded-full bg-white/[0.06] hover:bg-white hover:text-black text-neutral-200 transition-all border border-white/10 backdrop-blur-md" title="Instagram">
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
               </Link>
-              <Link href="https://www.linkedin.com/company/ecellvssut" target="_blank" className="p-2.5 rounded-full bg-neutral-900 hover:bg-white hover:text-black text-neutral-300 transition-all border border-white/10" title="LinkedIn">
+              <Link href="https://www.linkedin.com/company/ecellvssut" target="_blank" className="p-2.5 rounded-full bg-white/[0.06] hover:bg-white hover:text-black text-neutral-200 transition-all border border-white/10 backdrop-blur-md" title="LinkedIn">
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
               </Link>
             </div>
@@ -52,10 +78,10 @@ export default function Footer() {
 
           {/* Column 2: Useful Links */}
           <div className="space-y-4">
-            <h3 className="text-sm font-bold tracking-widest uppercase text-white border-b border-white/10 pb-2 inline-block">
+            <h3 className="text-xs sm:text-sm font-bold tracking-widest uppercase text-white border-b border-white/10 pb-2 inline-block">
               Useful Links
             </h3>
-            <ul className="space-y-2.5 text-sm font-light text-neutral-400">
+            <ul className="space-y-2.5 text-xs sm:text-sm font-light text-neutral-300">
               <li><Link href="/" className="hover:text-white transition-colors flex items-center gap-2">→ Home</Link></li>
               <li><Link href="/about" className="hover:text-white transition-colors flex items-center gap-2">→ About us</Link></li>
               <li><Link href="/gallery" className="hover:text-white transition-colors flex items-center gap-2">→ Gallery</Link></li>
@@ -66,10 +92,10 @@ export default function Footer() {
 
           {/* Column 3: Events */}
           <div className="space-y-4">
-            <h3 className="text-sm font-bold tracking-widest uppercase text-white border-b border-white/10 pb-2 inline-block">
+            <h3 className="text-xs sm:text-sm font-bold tracking-widest uppercase text-white border-b border-white/10 pb-2 inline-block">
               Events
             </h3>
-            <ul className="space-y-2.5 text-sm font-light text-neutral-400">
+            <ul className="space-y-2.5 text-xs sm:text-sm font-light text-neutral-300">
               <li><Link href="/events" className="hover:text-white transition-colors flex items-center gap-2">→ TEDx</Link></li>
               <li><Link href="/events" className="hover:text-white transition-colors flex items-center gap-2">→ InnoBuzz</Link></li>
               <li><Link href="/events" className="hover:text-white transition-colors flex items-center gap-2">→ E-Summit</Link></li>
@@ -81,7 +107,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Credits & Copyright Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 font-light gap-4 text-center">
+        <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-400 font-light gap-3 text-center">
           <p>©2026 E-CELL VSSUT. All rights reserved.</p>
           
           <div className="flex flex-wrap items-center justify-center gap-1.5">
@@ -89,18 +115,18 @@ export default function Footer() {
             <Link 
               href="https://madhusailesh.qzz.io/" 
               target="_blank" 
-              className="text-white font-medium hover:underline underline-offset-4 decoration-neutral-500 transition-colors"
+              className="text-white font-medium hover:underline underline-offset-4 decoration-neutral-400 transition-colors"
             >
               Madhu Sailesh Sasamal
             </Link>
-            <span className="text-neutral-600">|</span>
+            <span className="text-neutral-500">|</span>
             <span>Instructed by</span>
             <Link 
               href="https://ayush.thedev.id/" 
               target="_blank" 
-              className="text-white font-medium hover:underline underline-offset-4 decoration-neutral-500 transition-colors"
+              className="text-white font-medium hover:underline underline-offset-4 decoration-neutral-400 transition-colors"
             >
-              <span className="text-neutral-300 font-medium">Ayush Bardhan Tripathy</span>
+              <span className="text-neutral-200 font-medium">Ayush Bardhan Tripathy</span>
             </Link>
           </div>
         </div>

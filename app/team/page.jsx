@@ -49,7 +49,20 @@ const studentTeam = [
       github: "https://github.com/madhusailesh",
     },
   },
-
+{
+    name: "Ayush Bardhan Tripathy",
+    domain: "TECH",
+    branch: "Computer Science & Engineering",
+    batch: 2027,
+    role: "",
+    image: "/team/2027/AYUSH BARDHAN TRIPATHY.png",
+    socials: {
+      linkedin: "https://linkedin.com/in/ayush-bardhan-tripathy",
+      instagram: "https://www.instagram.com/ayush_bardhan?igsh=a3BiZmc1ZWJ5YzBt",
+      twitter: "",
+      github: "https://github.com/iddev5",
+    },
+  },
 {
     name: "Saran Rath",
     domain: "TECH",
@@ -107,20 +120,7 @@ const studentTeam = [
       github: "",
     },
   },
-  {
-    name: "Ayush Bardhan Tripathy",
-    domain: "TECH",
-    branch: "Computer Science & Engineering",
-    batch: 2027,
-    role: "",
-    image: "/team/2027/AYUSH BARDHAN TRIPATHY.png",
-    socials: {
-      linkedin: "https://linkedin.com/in/ayush-bardhan-tripathy",
-      instagram: "https://www.instagram.com/ayush_bardhan?igsh=a3BiZmc1ZWJ5YzBt",
-      twitter: "",
-      github: "https://github.com/iddev5",
-    },
-  },
+  
   {
     name: "Swaraj Soubhagya Khandai",
     domain: "EM",
@@ -385,9 +385,7 @@ export default function TeamPage() {
               )}
             </div>
 
-            <p className="text-[11px] sm:text-sm uppercase tracking-[0.3em] sm:tracking-[0.4em] text-neutral-400 font-medium">
-              MEET OUR MEMBERS
-            </p>
+             
           </div>
 
           {/* FACULTY SECTION */}

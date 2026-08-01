@@ -265,7 +265,7 @@ const handleSubmit = async (e) => {
 
         </div>
       </section>
-      <Footer />
+    
     </main>
   );
 }
