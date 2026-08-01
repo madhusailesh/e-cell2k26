@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import LineWaves from "./ui/LineWaves";
+// import LineWaves from "./ui/LineWaves";
 
 export default function Footer() {
   return (
@@ -9,21 +9,7 @@ export default function Footer() {
       
       {/* Background LineWaves Interactive Effect */}
       <div className="absolute inset-0 z-0 pointer-events-auto opacity-50">
-        <LineWaves
-          speed={0.3}
-          innerLineCount={32}
-          outerLineCount={36}
-          warpIntensity={1}
-          rotation={-45}
-          edgeFadeWidth={0}
-          colorCycleSpeed={1}
-          brightness={0.2}
-          color1="#ffffff"
-          color2="#ffffff"
-          color3="#ffffff"
-          enableMouseInteraction
-          mouseInfluence={2}
-        />
+      
       </div>
 
       {/* Ultra-Transparent Smooth Gradient Overlay */}
