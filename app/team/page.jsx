@@ -49,6 +49,22 @@ const studentTeam = [
       github: "https://github.com/madhusailesh",
     },
   },
+
+{
+    name: "Saran Rath",
+    domain: "TECH",
+    branch: "Electrical & Electronics Engineering",
+    batch: 2028,
+    role: "",
+    image: "/team/2028/saran rath.png",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/saran-rath-0a268a350/",
+      instagram: "",
+      twitter: "",
+      github: "",
+    },
+  },
+
   {
     name: "Hara Prasad Rout",
     domain: "PR",
@@ -119,6 +135,22 @@ const studentTeam = [
       github: "",
     },
   },
+
+{
+    name: "Arpan Agrawal",
+    domain: "EM",
+    branch: "Computer Science & Engineering",
+    batch: 2028,
+    role: "",
+    image: "/team/2028/arpan aggrawal.png",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/arpanagrwl/",
+      instagram: "",
+      twitter: "",
+      github: "",
+    },
+  },
+
   {
     name: "Riya Mishra",
     domain: "EM",
@@ -280,7 +312,7 @@ export default function TeamPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [displayedText, setDisplayedText] = useState("");
   const [flippedIndex, setFlippedIndex] = useState(null); // Mobile flip state tracker
-  const fullText = "OUR TEAM";
+  const fullText = "OUR-TEAM";
 
   // Page Refresh / Load Typing Effect & Skeleton Simulation
   useEffect(() => {
