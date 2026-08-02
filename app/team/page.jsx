@@ -21,13 +21,13 @@ const facultyMembers = [
   },
   {
     name: "Mr. Prasanta Kumar Parida",
-    role: "Assistant Professor",
-    department: "EEE Department",
+    role: "Faculty Advisor of EDP Society",
+    department: "EEE",
     image: "/faculty/pkp.png",
   },
   {
     name: "Mr. Anil Kumar Murmu",
-    role: "Assistant Professor",
+    role: "Faculty Advisor of EDP Society",
     department: "Chemical Engineering",
     image: "/faculty/akm.png",
   },
