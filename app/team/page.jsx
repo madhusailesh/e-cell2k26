@@ -33,7 +33,7 @@ const facultyMembers = [
   },
 ];
 
-// Student Team Data
+// Student  Data
 const studentTeam = [
   {
     name: "Madhu Sailesh Sasamal",
@@ -49,7 +49,7 @@ const studentTeam = [
       github: "https://github.com/madhusailesh",
     },
   },
-{
+  {
     name: "Ayush Bardhan Tripathy",
     domain: "TECH",
     branch: "Computer Science & Engineering",
@@ -58,12 +58,13 @@ const studentTeam = [
     image: "/team/2027/AYUSH BARDHAN TRIPATHY.png",
     socials: {
       linkedin: "https://linkedin.com/in/ayush-bardhan-tripathy",
-      instagram: "https://www.instagram.com/ayush_bardhan?igsh=a3BiZmc1ZWJ5YzBt",
+      instagram:
+        "https://www.instagram.com/ayush_bardhan?igsh=a3BiZmc1ZWJ5YzBt",
       twitter: "",
       github: "https://github.com/iddev5",
     },
   },
-  
+
   {
     name: "Satyanarayan Patra",
     domain: "M & S",
@@ -73,7 +74,8 @@ const studentTeam = [
     image: "/team/2028/satyanarayan_patra.png",
     socials: {
       linkedin: "",
-      instagram: "https://www.instagram.com/satya_narayan.07?utm_source=qr&igsh=MWFyeDIwdnVybXoybg==",
+      instagram:
+        "https://www.instagram.com/satya_narayan.07?utm_source=qr&igsh=MWFyeDIwdnVybXoybg==",
       twitter: "",
       github: "",
     },
@@ -114,7 +116,7 @@ const studentTeam = [
     batch: 2027,
     role: "Coordinator",
     image: "/team/2027/Lipika-Ray.png",
-    socials: { 
+    socials: {
       linkedin: "https://www.linkedin.com/in/lipika-ray-324995221/",
       instagram: "",
       twitter: "",
@@ -129,13 +131,14 @@ const studentTeam = [
     role: "",
     image: "/team/2028/Pratyush.png",
     socials: {
-      linkedin: "https://www.linkedin.com/in/pratyush-pradhan-5409b0301?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      linkedin:
+        "https://www.linkedin.com/in/pratyush-pradhan-5409b0301?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       instagram: "https://instagram.com/rishupratyush",
       twitter: "https://x.com/PratyushPratyu5",
       github: "",
     },
   },
-  
+
   {
     name: "Swaraj Soubhagya Khandai",
     domain: "EM",
@@ -144,14 +147,15 @@ const studentTeam = [
     role: "Assistant Coordinator",
     image: "/team/2028/swaraj.png",
     socials: {
-      linkedin: "https://www.linkedin.com/in/swaraj-soubhagya-khandai-b273b2384?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      linkedin:
+        "https://www.linkedin.com/in/swaraj-soubhagya-khandai-b273b2384?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       instagram: "",
       twitter: "",
       github: "",
     },
   },
 
-{
+  {
     name: "Arpan Agrawal",
     domain: "EM",
     branch: "Computer Science & Engineering",
@@ -216,7 +220,8 @@ const studentTeam = [
     role: "",
     image: "/team/2028/Akash Dansana.png",
     socials: {
-      linkedin: "https://www.linkedin.com/in/akash-dansana-4272953a4?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      linkedin:
+        "https://www.linkedin.com/in/akash-dansana-4272953a4?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       instagram: "https://www.instagram.com/uio_jype8?igsh=Mnp5Yml0enF6NW1k",
       twitter: "https://x.com/AkashDansana",
       github: "https://github.com/Akash-decoded",
@@ -230,7 +235,8 @@ const studentTeam = [
     role: "",
     image: "/team/2028/Seetal Priyadarshini Subudhi .png",
     socials: {
-      linkedin: "https://www.linkedin.com/in/seetal-priyadarshini-subudhi-a8a20132a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      linkedin:
+        "https://www.linkedin.com/in/seetal-priyadarshini-subudhi-a8a20132a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       instagram: "https://instagram.com/Seetal015priya",
       twitter: "",
       github: "",
@@ -258,7 +264,8 @@ const studentTeam = [
     role: "",
     image: "/team/2028/Aryan Rajguru.png",
     socials: {
-      linkedin: "https://www.linkedin.com/in/aryan-rajguru-a1333230a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      linkedin:
+        "https://www.linkedin.com/in/aryan-rajguru-a1333230a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       instagram: "",
       twitter: "",
       github: "",
@@ -286,8 +293,10 @@ const studentTeam = [
     role: "",
     image: "/team/2027/Pratikshya Mohapatra.png",
     socials: {
-      linkedin: "https://www.linkedin.com/in/moprati04?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-      instagram: "https://www.instagram.com/prati_kshya04?igsh=OWw5OWRzNnZqNDc5",
+      linkedin:
+        "https://www.linkedin.com/in/moprati04?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      instagram:
+        "https://www.instagram.com/prati_kshya04?igsh=OWw5OWRzNnZqNDc5",
       twitter: "",
       github: "",
     },
@@ -314,7 +323,8 @@ const studentTeam = [
     role: "",
     image: "/team/2028/Abhisek Tripathy.png",
     socials: {
-      linkedin: "https://www.linkedin.com/in/abhisek-tripathy-07b6ba411?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      linkedin:
+        "https://www.linkedin.com/in/abhisek-tripathy-07b6ba411?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       instagram: "",
       twitter: "",
       github: "",
@@ -343,7 +353,8 @@ const studentTeam = [
     role: "",
     image: "/team/2028/payal_jena.png",
     socials: {
-      linkedin: "https://www.linkedin.com/in/payal-jena-b11489361?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      linkedin:
+        "https://www.linkedin.com/in/payal-jena-b11489361?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       instagram: "",
       twitter: "https://x.com/Payallium",
       github: "",
@@ -357,7 +368,8 @@ const studentTeam = [
     role: "",
     image: "/team/2028/biswas_jain.png",
     socials: {
-      linkedin: "https://www.linkedin.com/in/biswas-jain-0722b0375?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      linkedin:
+        "https://www.linkedin.com/in/biswas-jain-0722b0375?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       instagram: "https://instagram.com/jain_biswas",
       twitter: "",
       github: "",
@@ -385,7 +397,8 @@ const studentTeam = [
     role: "",
     image: "/team/2028/somya_tridarsini_dash.png",
     socials: {
-      linkedin: "https://www.linkedin.com/in/somyatridarsinidash?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      linkedin:
+        "https://www.linkedin.com/in/somyatridarsinidash?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       instagram: "https://instagram.com/_somyatridarsini_",
       twitter: "",
       github: "",
@@ -399,8 +412,10 @@ const studentTeam = [
     role: "",
     image: "/team/2028/satyajit_nayak.png",
     socials: {
-      linkedin: "https://www.linkedin.com/in/satyajit-nayak-4b0966316?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-      instagram: "https://www.instagram.com/im_satyajitnayak?igsh=NW1mNmE1NGd3amMx",
+      linkedin:
+        "https://www.linkedin.com/in/satyajit-nayak-4b0966316?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      instagram:
+        "https://www.instagram.com/im_satyajitnayak?igsh=NW1mNmE1NGd3amMx",
       twitter: "",
       github: "",
     },
@@ -413,7 +428,8 @@ const studentTeam = [
     role: "",
     image: "/team/2028/hari_shah.png",
     socials: {
-      linkedin: "https://www.linkedin.com/in/hari-shah-2b8797343?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      linkedin:
+        "https://www.linkedin.com/in/hari-shah-2b8797343?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       instagram: "https://instagram.com/lv__hari__vl",
       twitter: "",
       github: "",
@@ -428,7 +444,8 @@ const studentTeam = [
     image: "/team/2028/kunaal_sahoo.png",
     socials: {
       linkedin: "https://www.linkedin.com/in/kunaalsahoo",
-      instagram: "https://www.instagram.com/kunaal.__.sahoo?igsh=MXgwbzk4NWF4ZW11Mg==",
+      instagram:
+        "https://www.instagram.com/kunaal.__.sahoo?igsh=MXgwbzk4NWF4ZW11Mg==",
       twitter: "",
       github: "https://github.com/Naalysis",
     },
@@ -441,8 +458,10 @@ const studentTeam = [
     role: "",
     image: "/team/2028/omm_shree_chandan.png",
     socials: {
-      linkedin: "https://www.linkedin.com/in/omm-shree-chandan-670b2636b?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-      instagram: "https://www.instagram.com/machine__ak_47?igsh=MWVtNmc2eTczbWE3MA==",
+      linkedin:
+        "https://www.linkedin.com/in/omm-shree-chandan-670b2636b?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      instagram:
+        "https://www.instagram.com/machine__ak_47?igsh=MWVtNmc2eTczbWE3MA==",
       twitter: "",
       github: "",
     },
@@ -455,7 +474,8 @@ const studentTeam = [
     role: "",
     image: "/team/2027/archit_kumar_panigrahi.png",
     socials: {
-      linkedin: "https://www.linkedin.com/in/archit-kumar-panigrahi?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      linkedin:
+        "https://www.linkedin.com/in/archit-kumar-panigrahi?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       instagram: "https://instagram.com/archit_panigrahi_",
       twitter: "https://x.com/kumar_arch89867",
       github: "https://github.com/op-architkumar",
@@ -499,7 +519,8 @@ const studentTeam = [
     image: "/team/2027/ritik_kumar_jena.png",
     socials: {
       linkedin: "https://www.linkedin.com/in/rkjena",
-      instagram: "https://www.instagram.com/arey.ritik?igsh=MXdzdTA3eTIxcXF6Mw%3D%3D&utm_source=qr",
+      instagram:
+        "https://www.instagram.com/arey.ritik?igsh=MXdzdTA3eTIxcXF6Mw%3D%3D&utm_source=qr",
       twitter: "https://x.com/ritikjena27",
       github: "",
     },
@@ -526,14 +547,13 @@ const studentTeam = [
     role: "",
     image: "/team/2028/bhagyashree_dhal.png",
     socials: {
-      linkedin: "https://www.linkedin.com/in/bhagyashree-dhal-a9a9b534a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      linkedin:
+        "https://www.linkedin.com/in/bhagyashree-dhal-a9a9b534a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       instagram: "",
       twitter: "",
       github: "",
     },
   },
-
-
 ];
 
 export default function TeamPage() {
@@ -596,7 +616,6 @@ export default function TeamPage() {
 
       <section className="relative w-full pt-32 sm:pt-44 pb-24 sm:pb-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          
           {/* Massive Header */}
           <div className="text-center space-y-4 mb-14 sm:mb-20">
             <div className="h-20 sm:h-36 flex items-center justify-center font-['Syncopate']">
@@ -613,8 +632,6 @@ export default function TeamPage() {
                 </h1>
               )}
             </div>
-
-             
           </div>
 
           {/* FACULTY SECTION */}
@@ -695,12 +712,11 @@ export default function TeamPage() {
                       onClick={() => setFlippedIndex(isFlipped ? null : index)} // Click/Tap to flip on mobile/tablet
                       className="group relative h-[420px] w-full [perspective:1200px] cursor-pointer"
                     >
-                      <div 
+                      <div
                         className={`relative h-full w-full rounded-[20px] transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] ${
                           isFlipped ? "[transform:rotateY(180deg)]" : ""
                         }`}
                       >
-                        
                         {/* FRONT FACE */}
                         <div className="absolute inset-0 h-full w-full rounded-[20px] bg-[#0d0d0d] border border-white/10 p-6 flex flex-col items-center justify-center text-center [backface-visibility:hidden] shadow-lg">
                           <div className="relative w-32 h-32 sm:w-36 sm:h-36 rounded-full border-2 border-white/30 p-1 mb-4 overflow-hidden bg-black">
@@ -750,7 +766,7 @@ export default function TeamPage() {
                               {student.role}
                             </div>
                           )}
-                          
+
                           {/* Domain Highlight Badge */}
                           <div className="mb-2 px-3.5 py-1 rounded-full bg-white text-black font-extrabold text-[11px] tracking-widest uppercase">
                             {student.domain}
@@ -762,7 +778,6 @@ export default function TeamPage() {
 
                           {/* Conditional Social Media SVG Logos Bar */}
                           <div className="flex items-center justify-center gap-2.5 flex-wrap">
-                            
                             {/* LinkedIn */}
                             {student.socials.linkedin && (
                               <Link
@@ -834,10 +849,8 @@ export default function TeamPage() {
                                 </svg>
                               </Link>
                             )}
-
                           </div>
                         </div>
-
                       </div>
                     </motion.div>
                   );
@@ -848,9 +861,7 @@ export default function TeamPage() {
                 </div>
               )}
             </div>
-
           </div>
-
         </div>
       </section>
     </main>

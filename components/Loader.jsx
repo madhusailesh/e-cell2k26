@@ -2,23 +2,14 @@
 
 import { useEffect, Suspense, useRef } from "react";
 import { motion } from "framer-motion";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { useTexture, Float, Sparkles, ContactShadows, Environment } from "@react-three/drei";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import * as THREE from "three";
 
 function CinematicLogo() {
   const texture = useTexture("/logo.png");
-  const groupRef = useRef(null);
-  
-  // NAYA: useThree hook se humein 3D scene ki screen size milti hai
-  const { viewport } = useThree(); 
-
-  // NAYA: Responsive Scale Logic
-  // Agar screen choti hai (jaise mobile), toh viewport.width kam hogi.
-  // Hum logo ko screen ki max 90% width tak limit kar rahe hain.
-  const logoWidth = 4; // planeGeometry ki width 4 hai
-  const scale = Math.min(1, (viewport.width * 0.9) / logoWidth);
+  const groupRef = useRef(null); // TS types hata diye yahan se
 
   // useFrame har frame par run hota hai (60fps) - Ye logo ko pass layega
   useFrame((state) => {
@@ -32,10 +23,11 @@ function CinematicLogo() {
   });
 
   return (
-    // NAYA: group mein `scale={[scale, scale, scale]}` pass kiya hai
-    <group ref={groupRef} position={[0, 0, -20]} rotation={[0, Math.PI / 2, 0]} scale={[scale, scale, scale]}>
+    // Initial position door set ki hai (-20) aur 90 degree ghuma diya hai
+    <group ref={groupRef} position={[0, 0, -20]} rotation={[0, Math.PI / 2, 0]}>
       <Float speed={2} rotationIntensity={0.4} floatIntensity={1.5}>
         <mesh>
+          {/* Logo ke dimension ke hisaab se args adjust karna agar pichka hua lage */}
           <planeGeometry args={[4, 1.2]} />
           <meshStandardMaterial
             map={texture}
@@ -54,11 +46,12 @@ function CinematicLogo() {
   );
 }
 
+// Yahan se bhi TS type hata diya `({ onFinish })` kar diya
 export default function Loader({ onFinish }) { 
   useEffect(() => {
     const timer = setTimeout(() => {
       onFinish();
-    }, 4000); 
+    }, 4000); // 4 sec tak cinematic effect chalega
     return () => clearTimeout(timer);
   }, [onFinish]);
 
@@ -79,7 +72,8 @@ export default function Loader({ onFinish }) {
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} color="#ffffff" />
         <pointLight position={[-10, -10, -10]} intensity={1} color="#4ade80" /> 
 
-      
+        {/* Real-time Environment Reflections */}
+        <Environment preset="city" />
 
         {/* Cinematic Particles */}
         <Sparkles 

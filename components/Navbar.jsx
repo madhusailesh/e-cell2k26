@@ -2,44 +2,30 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// --- 3D IMPORTS ---
-import { Canvas } from "@react-three/fiber";
-import { Sparkles } from "@react-three/drei";
-
-// ==========================================
-// 1. 3D NAVBAR BACKGROUND
-// ==========================================
-function Nav3DBackground() {
-  return (
-    // Navbar choda (wide) aur patla (thin) hota hai, isliye scale ko [30, 2, 2] rakha hai
-    <Sparkles 
-      count={150} 
-      scale={[30, 3, 2]} 
-      size={1.5} 
-      speed={0.3} 
-      opacity={0.4} 
-      color="#ffffff" 
-    />
-  );
-}
-
-// ==========================================
-// 2. MAIN NAVBAR COMPONENT
-// ==========================================
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [hoveredLink, setHoveredLink] = useState(null);
+  
+  // Scroll state track karne ke liye (premium feel)
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Events", href: "/events" },
     { name: "Gallery", href: "/gallery" },
-    // { name: "Startups", href: "/startups" },
     { name: "Wings", href: "/wings" },
     { name: "Testimonials", href: "/testimonials" },
     { name: "Contact", href: "/contact" },
@@ -47,19 +33,30 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50">
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "py-0" : "py-2"}`}>
       
       {/* 
         MAIN NAVBAR CONTAINER 
-        Glassmorphism effect ke sath
+        Dynamic Glassmorphism - Scroll karne par dark hoga
       */}
-      <div className="absolute inset-0 bg-[#050505]/60 backdrop-blur-xl border-b border-white/10 z-10" />
+      <div 
+        className={`absolute inset-0 transition-all duration-500 ${
+          scrolled 
+            ? "bg-[#050505]/80 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]" 
+            : "bg-transparent border-b border-transparent"
+        } z-10`} 
+      />
 
-      {/* --- 3D CANVAS BEHIND NAVBAR --- */}
-      <div className="absolute inset-0 z-0 pointer-events-none opacity-60">
-        <Canvas camera={{ position: [0, 0, 3] }}>
-          <Nav3DBackground />
-        </Canvas>
+      {/* --- CSS/Framer Motion Ambient Glow (3D Sparkles ka replacement) --- */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        <motion.div
+          animate={{
+            x: ["-5%", "5%", "-5%"],
+            opacity: [0.1, 0.2, 0.1],
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-0 left-1/4 w-[50%] h-full bg-white/10 blur-[60px]"
+        />
       </div>
 
       {/* --- FOREGROUND CONTENT (z-20) --- */}
@@ -73,6 +70,7 @@ export default function Navbar() {
                 src="/logo.png"
                 alt="E-Cell VSSUT Logo"
                 fill
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]"
                 priority
               />
@@ -87,7 +85,7 @@ export default function Navbar() {
                 href={link.href}
                 onMouseEnter={() => setHoveredLink(link.name)}
                 onMouseLeave={() => setHoveredLink(null)}
-                className="relative px-4 py-2 text-sm font-medium uppercase tracking-widest text-gray-400 hover:text-white transition-colors duration-300"
+                className="relative px-4 py-2 text-sm font-medium uppercase tracking-widest text-gray-300 hover:text-white transition-colors duration-300"
               >
                 {link.name}
                 
