@@ -2,14 +2,22 @@
 
 import { useEffect, Suspense, useRef } from "react";
 import { motion } from "framer-motion";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { useTexture, Float, Sparkles, ContactShadows, Environment } from "@react-three/drei";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { useTexture, Float, Sparkles, ContactShadows } from "@react-three/drei";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import * as THREE from "three";
 
 function CinematicLogo() {
   const texture = useTexture("/logo.png");
-  const groupRef = useRef(null); // TS types hata diye yahan se
+  const groupRef = useRef(null);
+  
+  // NAYA: 3D scene ki screen width nikalne ke liye
+  const { viewport } = useThree(); 
+
+  // NAYA: Responsive Scale Logic
+  // Agar screen choti hai (mobile), toh logo scale down ho jayega.
+  // Base width 4 hai, agar screen chhoti hui toh proportion mein shrink hoga.
+  const scale = Math.min(1, (viewport.width * 0.8) / 4); 
 
   // useFrame har frame par run hota hai (60fps) - Ye logo ko pass layega
   useFrame((state) => {
@@ -23,11 +31,15 @@ function CinematicLogo() {
   });
 
   return (
-    // Initial position door set ki hai (-20) aur 90 degree ghuma diya hai
-    <group ref={groupRef} position={[0, 0, -20]} rotation={[0, Math.PI / 2, 0]}>
+    // scale prop mein dynamic value pass kar di
+    <group 
+      ref={groupRef} 
+      position={[0, 0, -20]} 
+      rotation={[0, Math.PI / 2, 0]}
+      scale={[scale, scale, scale]} 
+    >
       <Float speed={2} rotationIntensity={0.4} floatIntensity={1.5}>
         <mesh>
-          {/* Logo ke dimension ke hisaab se args adjust karna agar pichka hua lage */}
           <planeGeometry args={[4, 1.2]} />
           <meshStandardMaterial
             map={texture}
@@ -46,7 +58,6 @@ function CinematicLogo() {
   );
 }
 
-// Yahan se bhi TS type hata diya `({ onFinish })` kar diya
 export default function Loader({ onFinish }) { 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -67,17 +78,14 @@ export default function Loader({ onFinish }) {
       className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#030303] overflow-hidden pointer-events-none"
     >
       <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
-        {/* Lights */}
-        <ambientLight intensity={0.2} />
-        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} color="#ffffff" />
-        <pointLight position={[-10, -10, -10]} intensity={1} color="#4ade80" /> 
+        {/* Lights (Adjusted for no-HDR setup) */}
+        <ambientLight intensity={0.5} />
+        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={3} color="#ffffff" />
+        <pointLight position={[-10, -10, -10]} intensity={1.5} color="#4ade80" /> 
 
-        {/* Real-time Environment Reflections */}
-        <Environment preset="city" />
-
-        {/* Cinematic Particles */}
+        {/* Cinematic Particles (Mobile ke liye count 150 kar diya taaki lag na ho) */}
         <Sparkles 
-          count={250} 
+          count={150} 
           scale={15} 
           size={1.2} 
           speed={0.5} 
@@ -104,7 +112,7 @@ export default function Loader({ onFinish }) {
           <Bloom 
             luminanceThreshold={0.2} 
             luminanceSmoothing={0.9} 
-            intensity={1.5} 
+            intensity={1.2} 
           />
         </EffectComposer>
       </Canvas>
