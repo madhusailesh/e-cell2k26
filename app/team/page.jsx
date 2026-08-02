@@ -77,7 +77,8 @@ const studentTeam = [
       twitter: "",
       github: "",
     },
-  }
+  },
+  {
     name: "Saran Rath",
     domain: "TECH",
     branch: "Electrical & Electronics Engineering",
