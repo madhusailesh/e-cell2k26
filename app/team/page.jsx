@@ -473,6 +473,49 @@ const studentTeam = [
       twitter: "",
       github: "",
     },
+  },
+
+  {
+    name: "Ritik Kumar Jena",
+    domain: "M & S, VIDEO EDITING",
+    branch: "Electronics & Telecommunication Engineering",
+    batch: 2027,
+    role: "",
+    image: "/team/2027/ritik_kumar_jena.png",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/rkjena",
+      instagram: "https://www.instagram.com/arey.ritik?igsh=MXdzdTA3eTIxcXF6Mw%3D%3D&utm_source=qr",
+      twitter: "https://x.com/ritikjena27",
+      github: "",
+    },
+  },
+  {
+    name: "Prachee Pradhan",
+    domain: "GD",
+    branch: "Civil Engineering",
+    batch: 2028,
+    role: "",
+    image: "/team/2028/prachee_pradhan.png",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/prachee-pradhan-811173344",
+      instagram: "",
+      twitter: "",
+      github: "",
+    },
+  },
+  {
+    name: "Bhagyashree Dhal",
+    domain: "M & S",
+    branch: "Electronics & Telecommunication Engineering",
+    batch: 2028,
+    role: "",
+    image: "/team/2028/bhagyashree_dhal.png",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/bhagyashree-dhal-a9a9b534a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      instagram: "",
+      twitter: "",
+      github: "",
+    },
   }
 ];
 
