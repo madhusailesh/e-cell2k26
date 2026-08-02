@@ -516,7 +516,22 @@ const studentTeam = [
       twitter: "",
       github: "",
     },
+  },
+{
+    name: "Satyanarayan Patra",
+    domain: "M & S",
+    branch: "Electrical & Electronics Engineering",
+    batch: 2028,
+    role: "",
+    image: "/team/2028/satyanarayan_patra.png",
+    socials: {
+      linkedin: "",
+      instagram: "https://www.instagram.com/satya_narayan.07?utm_source=qr&igsh=MWFyeDIwdnVybXoybg==",
+      twitter: "",
+      github: "",
+    },
   }
+
 ];
 
 export default function TeamPage() {
