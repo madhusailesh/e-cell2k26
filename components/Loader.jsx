@@ -79,8 +79,7 @@ export default function Loader({ onFinish }) {
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} color="#ffffff" />
         <pointLight position={[-10, -10, -10]} intensity={1} color="#4ade80" /> 
 
-        {/* Real-time Environment Reflections */}
-        <Environment preset="city" />
+      
 
         {/* Cinematic Particles */}
         <Sparkles 
